@@ -1,2 +1,1 @@
 "# firstperson_game" 
-testthing
