@@ -1,19 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5lt5m0uqwj0k"]
+[gd_scene load_steps=5 format=3 uid="uid://b5lt5m0uqwj0k"]
 
 [ext_resource type="PackedScene" uid="uid://byexxkyi03u5g" path="res://addons/quick_primitives/scenes/Cube.tscn" id="1_7vvow"]
-[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_mab5e"]
+[ext_resource type="PackedScene" uid="uid://clg0vm2kxhwsg" path="res://addons/quick_primitives/scenes/Plane.tscn" id="2_wfy5u"]
+[ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://addons/quick_primitives/scenes/Env.tscn" id="3_uut87"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bf584"]
 albedo_color = Color(1, 0.360784, 0.364706, 1)
 
-[node name="Node3D" type="Node3D"]
+[node name="MainLevel" type="Node3D"]
 
 [node name="Cube" parent="." instance=ExtResource("1_7vvow")]
 transform = Transform3D(9.30128, 0, 0, 0, 0.28512, 0, 0, 0, 18.3991, -1.15779, 0, -1.19495)
 material_override = SubResource("StandardMaterial3D_bf584")
 
-[node name="Player" parent="." instance=ExtResource("2_mab5e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29422, 2.94861, -0.861963)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-1, 0, 0, 0, 0.387934, 0.921687, 0, -0.921687, 0.387934, 0, 3.28565, 0)
+
+[node name="Plane" parent="." instance=ExtResource("2_wfy5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7901, 0, 14.7804)
+
+[node name="Env" parent="." instance=ExtResource("3_uut87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.36371, 6.66817, 19.8706)
