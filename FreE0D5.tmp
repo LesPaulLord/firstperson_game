@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cnh3y7h6hxx4a"]
+
+[ext_resource type="Script" path="res://PlayerTest.gd" id="1_nudm8"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wiw33"]
+size = Vector2(10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tekgj"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hshen"]
+radius = 0.4
+height = 1.6
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6m1rp"]
+radius = 0.4
+height = 1.6
+
+[node name="FredTest" type="Node3D"]
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.03201, 0, 0, 0, 1.03201, 0, 0, 0, 1.03201, 0, 0, 0)
+mesh = SubResource("PlaneMesh_wiw33")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_tekgj")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.810708, 0)
+script = ExtResource("1_nudm8")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46753, 0)
+current = true
+
+[node name="Player" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("CapsuleMesh_hshen")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_6m1rp")
