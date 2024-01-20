@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://byexxkyi03u5g" path="res://addons/quick_primitives/scenes/Cube.tscn" id="1_7vvow"]
 [ext_resource type="PackedScene" uid="uid://clg0vm2kxhwsg" path="res://addons/quick_primitives/scenes/Plane.tscn" id="2_wfy5u"]
-[ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://addons/quick_primitives/scenes/Env.tscn" id="3_uut87"]
+[ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://Env.tscn" id="3_uut87"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bf584"]
 albedo_color = Color(1, 0.360784, 0.364706, 1)
