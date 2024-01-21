@@ -1,19 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgpjxoygnvyy4"]
+[gd_scene load_steps=4 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/player/Player.gd" id="1_1fhis"]
 [ext_resource type="Script" path="res://assets/player/Interaction.gd" id="2_fh2ib"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_swcaj"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tdn1f"]
 
 [node name="Player" type="CharacterBody3D"]
 disable_mode = 2
 floor_max_angle = 0.802851
 script = ExtResource("1_1fhis")
 
-[node name="body" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_euj4i")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_tdn1f")
 
 [node name="rotation_helper" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -32,14 +30,6 @@ spot_angle_attenuation = 1.56917
 target_position = Vector3(0, 0, -2)
 collision_mask = 2
 script = ExtResource("2_fh2ib")
-
-[node name="GrabPosition3D" type="Marker3D" parent="rotation_helper/Camera3D/interaction_raycast"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-
-[node name="Area3D" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("CapsuleShape3D_swcaj")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3

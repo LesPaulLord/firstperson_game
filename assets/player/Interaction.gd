@@ -4,7 +4,7 @@ extends RayCast3D
 
 var current_collider
 
-@onready var interaction_label = get_node("/root/GymProg01Door/UI/Label")
+@onready var interaction_label = get_node("/root/MainLevel/UI/Label")
 
 func _ready():
 	set_interaction_text("")
