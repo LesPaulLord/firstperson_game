@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://dr64fn46ifjnd"]
+
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/player/Player.tscn" id="1_333rt"]
+[ext_resource type="Script" path="res://scripts/interactable/Interactable.gd" id="1_qxyfn"]
+[ext_resource type="PackedScene" uid="uid://bxhd5gkg8tbf2" path="res://scripts/door_Test.tscn" id="2_su3xn"]
+[ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://assets/Env.tscn" id="4_o0k0n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_x7drc"]
+size = Vector3(5, 0.1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7w18c"]
+size = Vector3(5, 0.1, 5)
+
+[node name="GymProg01Door" type="Node3D"]
+
+[node name="Env" parent="." instance=ExtResource("4_o0k0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89847, 4.08624, 4.31585)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("1_333rt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.70782, 1.35199, -0.928107)
+
+[node name="Meshes" type="Node" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="Meshes"]
+mesh = SubResource("BoxMesh_x7drc")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Meshes/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Floor/StaticBody3D"]
+shape = SubResource("BoxShape3D_7w18c")
+
+[node name="Button" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(-1.7358e-08, 5.98008, 0, -0.397105, -2.61397e-07, 0, 0, 0, 0.214851, -1.8869, 1.14215, 0)
+mesh = SubResource("BoxMesh_x7drc")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Meshes/Button"]
+collision_layer = 3
+script = ExtResource("1_qxyfn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Button/StaticBody3D"]
+shape = SubResource("BoxShape3D_7w18c")
+
+[node name="Door" parent="Meshes" instance=ExtResource("2_su3xn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0599785, 0.05, 1.55705)

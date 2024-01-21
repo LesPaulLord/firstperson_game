@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5lt5m0uqwj0k"]
 
 [ext_resource type="PackedScene" uid="uid://byexxkyi03u5g" path="res://addons/quick_primitives/scenes/Cube.tscn" id="1_7vvow"]
-[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_nx5dr"]
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/player/Player.tscn" id="2_nx5dr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_affav"]
 albedo_color = Color(0.431373, 0.431373, 0.431373, 1)

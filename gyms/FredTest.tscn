@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cnh3y7h6hxx4a"]
 
-[ext_resource type="Script" path="res://PlayerTest.gd" id="1_nudm8"]
+[ext_resource type="Script" path="res://scripts/PlayerTest.gd" id="1_q7krc"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wiw33"]
 size = Vector2(10, 10)
@@ -28,7 +28,7 @@ shape = SubResource("BoxShape3D_tekgj")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.810708, 0)
-script = ExtResource("1_nudm8")
+script = ExtResource("1_q7krc")
 
 [node name="camera" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46753, 0)
