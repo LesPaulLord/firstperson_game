@@ -15,7 +15,7 @@ size = Vector3(5, 0.05, 5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15641, 1.03804, -0.351292)
 
 [node name="Env" parent="." instance=ExtResource("1_68sgc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6368, 0, 1.25159)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6368, 6.13635, 1.25159)
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -47,4 +47,34 @@ skeleton = NodePath("../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="Enviro_Meshes/Floor_01"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Enviro_Meshes/Floor_01/StaticBody3D"]
+shape = SubResource("BoxShape3D_kp18y")
+
+[node name="Floor_02" type="MeshInstance3D" parent="Enviro_Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+mesh = SubResource("BoxMesh_dotb6")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviro_Meshes/Floor_02"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviro_Meshes/Floor_02/StaticBody3D"]
+shape = SubResource("BoxShape3D_kp18y")
+
+[node name="Floor_03" type="MeshInstance3D" parent="Enviro_Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
+mesh = SubResource("BoxMesh_dotb6")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviro_Meshes/Floor_03"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviro_Meshes/Floor_03/StaticBody3D"]
+shape = SubResource("BoxShape3D_kp18y")
+
+[node name="Floor_04" type="MeshInstance3D" parent="Enviro_Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+mesh = SubResource("BoxMesh_dotb6")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviro_Meshes/Floor_04"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviro_Meshes/Floor_04/StaticBody3D"]
 shape = SubResource("BoxShape3D_kp18y")
