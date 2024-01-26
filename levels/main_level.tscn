@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvlgf3lprgn4"]
+[gd_scene load_steps=8 format=3 uid="uid://cvlgf3lprgn4"]
 
 [ext_resource type="Script" path="res://levels/main_level.gd" id="1_1hff5"]
 [ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://assets/Env.tscn" id="1_68sgc"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/player/Player.tscn" id="2_t5ga8"]
 [ext_resource type="AudioStream" uid="uid://bnuua63g56fps" path="res://sound/Resting Comfortably.mp3" id="4_a18ih"]
+[ext_resource type="MeshLibrary" uid="uid://d12pgrboxbv1w" path="res://assets/Module/Module_Library.tres" id="5_ro7eb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_dotb6"]
 size = Vector3(5, 0.05, 5)
@@ -44,6 +45,7 @@ vertical_alignment = 1
 [node name="Enviro_Meshes" type="Node" parent="."]
 
 [node name="Floor_01" type="MeshInstance3D" parent="Enviro_Meshes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53043, 0, 2)
 mesh = SubResource("BoxMesh_dotb6")
 skeleton = NodePath("../..")
 
@@ -53,7 +55,7 @@ skeleton = NodePath("../..")
 shape = SubResource("BoxShape3D_kp18y")
 
 [node name="Floor_02" type="MeshInstance3D" parent="Enviro_Meshes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53043, 0, -3)
 mesh = SubResource("BoxMesh_dotb6")
 skeleton = NodePath("../..")
 
@@ -63,7 +65,7 @@ skeleton = NodePath("../..")
 shape = SubResource("BoxShape3D_kp18y")
 
 [node name="Floor_03" type="MeshInstance3D" parent="Enviro_Meshes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46957, 0, -3)
 mesh = SubResource("BoxMesh_dotb6")
 skeleton = NodePath("../..")
 
@@ -73,7 +75,7 @@ skeleton = NodePath("../..")
 shape = SubResource("BoxShape3D_kp18y")
 
 [node name="Floor_04" type="MeshInstance3D" parent="Enviro_Meshes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46957, 0, 2)
 mesh = SubResource("BoxMesh_dotb6")
 skeleton = NodePath("../..")
 
@@ -87,3 +89,7 @@ shape = SubResource("BoxShape3D_kp18y")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sound"]
 stream = ExtResource("4_a18ih")
 volume_db = -10.0
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("5_ro7eb")
+metadata/_editor_floor_ = Vector3(0, 1, 0)
