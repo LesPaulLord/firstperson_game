@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://assets/Env.tscn" id="1_68sgc"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/player/Player.tscn" id="2_t5ga8"]
 [ext_resource type="AudioStream" uid="uid://bnuua63g56fps" path="res://sound/Resting Comfortably.mp3" id="4_a18ih"]
-[ext_resource type="MeshLibrary" uid="uid://d12pgrboxbv1w" path="res://assets/Module/Module_Library.tres" id="5_ro7eb"]
+[ext_resource type="MeshLibrary" uid="uid://b54dj6r1iq8pk" path="res://assets/Module_Blocky/Module_Library.tres" id="5_ro7eb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_dotb6"]
 size = Vector3(5, 0.05, 5)
