@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dr64fn46ifjnd"]
+[gd_scene load_steps=6 format=3 uid="uid://dr64fn46ifjnd"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/player/Player.tscn" id="1_333rt"]
 [ext_resource type="Script" path="res://scripts/interactable/Interactable.gd" id="1_qxyfn"]
 [ext_resource type="PackedScene" uid="uid://bxhd5gkg8tbf2" path="res://scripts/door_Test.tscn" id="2_su3xn"]
-[ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://levels/Env.tscn" id="4_o0k0n"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_x7drc"]
 size = Vector3(5, 0.1, 5)
@@ -12,9 +11,6 @@ size = Vector3(5, 0.1, 5)
 size = Vector3(5, 0.1, 5)
 
 [node name="GymProg01Door" type="Node3D"]
-
-[node name="Env" parent="." instance=ExtResource("4_o0k0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89847, 4.08624, 4.31585)
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -36,9 +32,6 @@ grow_vertical = 0
 text = "Press E to interact"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Player" parent="." instance=ExtResource("1_333rt")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.70782, 1.35199, -0.928107)
 
 [node name="Meshes" type="Node" parent="."]
 
@@ -66,3 +59,6 @@ shape = SubResource("BoxShape3D_7w18c")
 
 [node name="Door" parent="Meshes" instance=ExtResource("2_su3xn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0599785, 0.05, 1.55705)
+
+[node name="Player2" parent="." instance=ExtResource("1_333rt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 1.4, 0.2)
