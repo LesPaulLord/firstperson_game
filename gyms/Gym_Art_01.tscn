@@ -1,3 +1,80 @@
-[gd_scene format=3 uid="uid://6cpvdmhls4ny"]
+[gd_scene load_steps=20 format=3 uid="uid://6cpvdmhls4ny"]
+
+[ext_resource type="PackedScene" uid="uid://n4otgtri7tgu" path="res://assets/Module_Blocky/SM_Floor_1x1_01a.glb" id="1_0dq3w"]
+[ext_resource type="PackedScene" uid="uid://2wvl14edsqoo" path="res://assets/Module_Blocky/SM_Floor_1x2_01a.glb" id="2_ohd1y"]
+[ext_resource type="PackedScene" uid="uid://csmaijf2igvay" path="res://assets/Module_Blocky/SM_Floor_2x2_01a.glb" id="3_svral"]
+[ext_resource type="PackedScene" uid="uid://bxuwudluql54f" path="res://assets/Module_Blocky/SM_RoofStairs_1x1_01a.glb" id="4_taunj"]
+[ext_resource type="PackedScene" uid="uid://bges7qw6gwvf8" path="res://assets/Module_Blocky/SM_Roof_1x1_01a.glb" id="5_dqosm"]
+[ext_resource type="PackedScene" uid="uid://f5t41e6hd11c" path="res://assets/Module_Blocky/SM_Roof_1x2_01a.glb" id="6_rdxaq"]
+[ext_resource type="PackedScene" uid="uid://g8s5j7uhys3c" path="res://assets/Module_Blocky/SM_Roof_2x2_01a.glb" id="7_aiywf"]
+[ext_resource type="PackedScene" uid="uid://bvwku5bq2aqha" path="res://assets/Module_Blocky/SM_Stairs_1x1_01a.glb" id="8_cojnb"]
+[ext_resource type="PackedScene" uid="uid://c8nbhdiy1ayqi" path="res://assets/Module_Blocky/SM_WallCornerStairs_In_2x2_01a.glb" id="9_omm2b"]
+[ext_resource type="PackedScene" uid="uid://bdijoewt202pd" path="res://assets/Module_Blocky/SM_WallCornerStairs_Out_2x2_01a.glb" id="10_3k4ei"]
+[ext_resource type="PackedScene" uid="uid://b4ag5thmshkih" path="res://assets/Module_Blocky/SM_WallCorner_In_1x2_01a.glb" id="11_1ybn8"]
+[ext_resource type="PackedScene" uid="uid://d23gnf5sumqpl" path="res://assets/Module_Blocky/SM_WallCorner_Out_1x2_01a.glb" id="12_c5en5"]
+[ext_resource type="PackedScene" uid="uid://dxxnkysmhafyl" path="res://assets/Module_Blocky/SM_WallDoor_1x2_01a.glb" id="13_4fy34"]
+[ext_resource type="PackedScene" uid="uid://cmvol5d1her3u" path="res://assets/Module_Blocky/SM_WallDoor_1x2_02a.glb" id="14_sy3sv"]
+[ext_resource type="PackedScene" uid="uid://itgxyat68d1m" path="res://assets/Module_Blocky/SM_WallStairs_1x1_01a.glb" id="15_dddn6"]
+[ext_resource type="PackedScene" uid="uid://dv6or7sdspaof" path="res://assets/Module_Blocky/SM_WallStairs_1x1_01b.glb" id="16_xjwh2"]
+[ext_resource type="PackedScene" uid="uid://ia0ho8homme7" path="res://assets/Module_Blocky/SM_WallWindow_1x2_01b.glb" id="17_f37tg"]
+[ext_resource type="PackedScene" uid="uid://cnnbauvrircor" path="res://assets/Module_Blocky/SM_Wall_1x1_01a.glb" id="18_0jdes"]
+[ext_resource type="PackedScene" uid="uid://ymeo4ll7yg53" path="res://assets/Module_Blocky/SM_Wall_1x2_01a.glb" id="19_ytdgq"]
 
 [node name="ArtSubLevel01" type="Node3D"]
+
+[node name="SM_Floor_1x1_01a2" parent="." instance=ExtResource("1_0dq3w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_Floor_1x2_01a2" parent="." instance=ExtResource("2_ohd1y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_Floor_2x2_01a2" parent="." instance=ExtResource("3_svral")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_RoofStairs_1x1_01a2" parent="." instance=ExtResource("4_taunj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_Roof_1x1_01a2" parent="." instance=ExtResource("5_dqosm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_Roof_1x2_01a2" parent="." instance=ExtResource("6_rdxaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_Roof_2x2_01a2" parent="." instance=ExtResource("7_aiywf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_Stairs_1x1_01a2" parent="." instance=ExtResource("8_cojnb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_WallCornerStairs_In_2x2_01a2" parent="." instance=ExtResource("9_omm2b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_WallCornerStairs_Out_2x2_01a2" parent="." instance=ExtResource("10_3k4ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_WallCorner_In_1x2_01a2" parent="." instance=ExtResource("11_1ybn8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_WallCorner_Out_1x2_01a2" parent="." instance=ExtResource("12_c5en5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_WallDoor_1x2_01a2" parent="." instance=ExtResource("13_4fy34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_WallDoor_1x2_02a2" parent="." instance=ExtResource("14_sy3sv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_WallStairs_1x1_01a2" parent="." instance=ExtResource("15_dddn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_WallStairs_1x1_01b2" parent="." instance=ExtResource("16_xjwh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_WallWindow_1x2_01b2" parent="." instance=ExtResource("17_f37tg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_Wall_1x1_01a2" parent="." instance=ExtResource("18_0jdes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="SM_Wall_1x2_01a2" parent="." instance=ExtResource("19_ytdgq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
