@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cp3r3mvxe70pv"
-path="res://.godot/imported/SM_TileStairs_1x1_01a.glb-a24742e27622ab56ca819d350649f5f1.scn"
+uid="uid://bxuwudluql54f"
+path="res://.godot/imported/SM_RoofStairs_1x1_01a.glb-e6f54ecf81ff93fbd76d877bcf9e8371.scn"
 
 [deps]
 
-source_file="res://assets/Module_Blocky/SM_TileStairs_1x1_01a.glb"
-dest_files=["res://.godot/imported/SM_TileStairs_1x1_01a.glb-a24742e27622ab56ca819d350649f5f1.scn"]
+source_file="res://assets/Module_Blocky/SM_RoofStairs_1x1_01a.glb"
+dest_files=["res://.godot/imported/SM_RoofStairs_1x1_01a.glb-e6f54ecf81ff93fbd76d877bcf9e8371.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c0n6yv7pyhueg"
-path="res://.godot/imported/SM_Tile_2x2_01a.glb-45d1f6c6878d34347eb76c72a80d9424.scn"
+uid="uid://bges7qw6gwvf8"
+path="res://.godot/imported/SM_Roof_1x1_01a.glb-7d710cddd58ebdef70cab9740f70dc6f.scn"
 
 [deps]
 
-source_file="res://assets/Module_Blocky/SM_Tile_2x2_01a.glb"
-dest_files=["res://.godot/imported/SM_Tile_2x2_01a.glb-45d1f6c6878d34347eb76c72a80d9424.scn"]
+source_file="res://assets/Module_Blocky/SM_Roof_1x1_01a.glb"
+dest_files=["res://.godot/imported/SM_Roof_1x1_01a.glb-7d710cddd58ebdef70cab9740f70dc6f.scn"]
 
 [params]
 

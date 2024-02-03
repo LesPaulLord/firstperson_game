@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/player/Player.tscn" id="1_333rt"]
 [ext_resource type="Script" path="res://scripts/interactable/Interactable.gd" id="1_qxyfn"]
 [ext_resource type="PackedScene" uid="uid://bxhd5gkg8tbf2" path="res://scripts/door_Test.tscn" id="2_su3xn"]
-[ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://assets/Env.tscn" id="4_o0k0n"]
+[ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://levels/Env.tscn" id="4_o0k0n"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_x7drc"]
 size = Vector3(5, 0.1, 5)

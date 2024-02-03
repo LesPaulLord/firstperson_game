@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ia0ho8homme7"
-path="res://.godot/imported/SM_WallWindow_1x2_01b.glb-16123f1e9915db1aed900a584165abf0.scn"
+uid="uid://g8s5j7uhys3c"
+path="res://.godot/imported/SM_Roof_2x2_01a.glb-1e19dd05fb53c6ed7f81294a53bb878e.scn"
 
 [deps]
 
-source_file="res://assets/Module_Blocky/SM_WallWindow_1x2_01b.glb"
-dest_files=["res://.godot/imported/SM_WallWindow_1x2_01b.glb-16123f1e9915db1aed900a584165abf0.scn"]
+source_file="res://assets/Module_Blocky/SM_Roof_2x2_01a.glb"
+dest_files=["res://.godot/imported/SM_Roof_2x2_01a.glb-1e19dd05fb53c6ed7f81294a53bb878e.scn"]
 
 [params]
 
