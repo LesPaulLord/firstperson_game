@@ -4,7 +4,7 @@ extends RayCast3D
 
 var current_collider
 
-@onready var interaction_label = get_node("/root/MainLevel/UI/Label")
+@onready var interaction_label = get_node("/root/GymProg01Door/UI/Label")
 
 func _ready():
 	set_interaction_text("")
@@ -20,9 +20,11 @@ func _process(_delta):
 		if Input.is_action_just_pressed("Interact"):
 			set_interaction_text(collider.get_interaction_text())
 			collider.interact()
+			interaction_label.text = collider.get_prompt()
 			
 	elif current_collider:
 		current_collider=null
+		set_interaction_text("")
 		
 func set_interaction_text(text):
 	if !text:

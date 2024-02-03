@@ -16,9 +16,9 @@ shape = SubResource("CapsuleShape3D_tdn1f")
 [node name="rotation_helper" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
-[node name="Camera3D" type="Camera3D" parent="rotation_helper"]
+[node name="PlayerCamera" type="Camera3D" parent="rotation_helper"]
 
-[node name="interaction_raycast" type="RayCast3D" parent="rotation_helper/Camera3D"]
+[node name="interaction_raycast" type="RayCast3D" parent="rotation_helper/PlayerCamera"]
 target_position = Vector3(0, 0, -2)
 collision_mask = 2
 script = ExtResource("2_n06d0")
