@@ -41,4 +41,4 @@ stream = ExtResource("4_a18ih")
 volume_db = -20.0
 
 [node name="Player" parent="." instance=ExtResource("2_t5ga8")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.14864, 1, 5.41326)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.79433, 1, 5.5383)
