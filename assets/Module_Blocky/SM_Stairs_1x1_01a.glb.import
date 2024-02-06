@@ -32,7 +32,6 @@ import_script/path=""
 _subresources={
 "nodes": {
 "PATH:SM_Stairs_1x1_01a": {
-"generate/physics": true,
 "physics/shape_type": 1
 }
 }
