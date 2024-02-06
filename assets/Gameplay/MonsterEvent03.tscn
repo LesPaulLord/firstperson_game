@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://daos86yrm1dl4"]
+
+[sub_resource type="GDScript" id="GDScript_m5eps"]
+script/source = "extends Area3D
+
+@onready var triggered = false
+
+func _on_body_entered(body):
+	
+	triggered = true
+	print(\"collision\")
+	
+func _on_body_exited(body):
+	triggered = false
+	print(\"exited\")
+"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_klmsy"]
+albedo_color = Color(1, 0, 0.415686, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_17l06"]
+material = SubResource("StandardMaterial3D_klmsy")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lweq0"]
+size = Vector3(0.972656, 2.61644, 1.06921)
+
+[node name="MonsterEvent03" type="Node3D"]
+
+[node name="MonsterEvent03" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0104699, 1.7, -0.0185049)
+script = SubResource("GDScript_m5eps")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MonsterEvent03"]
+mesh = SubResource("BoxMesh_17l06")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MonsterEvent03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0120862, -0.332972, 0.000389576)
+shape = SubResource("BoxShape3D_lweq0")
+
+[connection signal="body_entered" from="MonsterEvent03" to="MonsterEvent03" method="_on_body_entered"]
+[connection signal="body_exited" from="MonsterEvent03" to="MonsterEvent03" method="_on_body_exited"]
