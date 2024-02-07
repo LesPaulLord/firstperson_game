@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://djipnjqvphaj5"]
+
+[ext_resource type="Script" path="res://sound/Music_Manager.gd" id="1_lrcnh"]
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_lrcnh")
+
+[node name="MonsterMusic01" type="AudioStreamPlayer" parent="."]
+volume_db = -80.0

@@ -15,6 +15,10 @@ run/main_scene="res://levels/main_level.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 run/max_fps=30
 
+[autoload]
+
+MusicManager="*res://sound/Music_Manager.tscn"
+
 [dotnet]
 
 project/assembly_name="Testgit"
