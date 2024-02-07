@@ -10,6 +10,10 @@ var monsterMusic01 = load("res://sound/Monster_Theme_001_Bass.mp3")
 var monsterMusic02 = load("res://sound/Monster_Theme_001_Drums.mp3")
 var monsterMusic03 = load("res://sound/Monster_Theme_001_Keys.mp3")
 
+@onready var music_fader = $Sound/MonsterMusic_FadeIn
+var fade_duration := 2.00
+var fade_type := 1
+
 func _ready():
 	
 	var show_event01 = $Gameplay/MonsterEvent01
@@ -54,10 +58,10 @@ func MonsterEvent01Called():
 	$Sound/MonsterMusic01.play()
 	
 	$Sound/MonsterMusic02.play()
-	$Sound/MonsterMusic02.volume_db = -500
+	$Sound/MonsterMusic02.volume_db = -80
 	
 	$Sound/MonsterMusic03.play()
-	$Sound/MonsterMusic03.volume_db = -500
+	$Sound/MonsterMusic03.volume_db = -80
 	
 	event_number = 2
 	$Gameplay/MonsterEvent01.set_visible(false)
@@ -69,7 +73,7 @@ func MonsterEvent01Called():
 func MonsterEvent02Called():
 	print("setting up monster event 03")
 	
-	$Sound/MonsterMusic02.volume_db = 0
+	music_fader.play("MonsterMusic02_FadeIn")
 	
 	event_number = 3
 	$Gameplay/MonsterEvent02.set_visible(false)
@@ -81,7 +85,7 @@ func MonsterEvent02Called():
 func MonsterEvent03Called():
 	print("setting up END GAME")
 	
-	$Sound/MonsterMusic03.volume_db = 0
+	music_fader.play("MonsterMusic03_FadeIn")
 	
 	event_number = 4
 	$Gameplay/MonsterEvent03.set_visible(false)

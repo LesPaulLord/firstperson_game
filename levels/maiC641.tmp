@@ -1,51 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cvlgf3lprgn4"]
+[gd_scene load_steps=9 format=3 uid="uid://cvlgf3lprgn4"]
 
 [ext_resource type="Script" path="res://scripts/main_level.gd" id="1_1hff5"]
 [ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://levels/Env.tscn" id="1_68sgc"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/player/Player.tscn" id="2_t5ga8"]
+[ext_resource type="PackedScene" uid="uid://djipnjqvphaj5" path="res://sound/Music_Manager.tscn" id="4_f7eka"]
 [ext_resource type="AudioStream" uid="uid://jv43jugfj0ts" path="res://sound/Monster_Theme_001_Bass.mp3" id="5_6423e"]
 [ext_resource type="PackedScene" uid="uid://b8gdforp2mtwu" path="res://assets/Gameplay/MonsterEvent.tscn" id="5_n4x6b"]
 [ext_resource type="AudioStream" uid="uid://d28b4umtrm044" path="res://sound/Monster_Theme_001_Drums.mp3" id="6_4778u"]
 [ext_resource type="AudioStream" uid="uid://coujusol2xs3g" path="res://sound/Monster_Theme_001_Keys.mp3" id="7_ghnrq"]
-
-[sub_resource type="Animation" id="Animation_srbt5"]
-resource_name = "MonsterMusic02_FadeIn"
-length = 3.0
-step = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../Sound/MonsterMusic02:volume_db")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 3.13833),
-"update": 0,
-"values": [-80.0, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_s2548"]
-resource_name = "MonsterMusic03_FadeIn"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../Sound/MonsterMusic03:volume_db")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 3.03143),
-"update": 0,
-"values": [-80.0, 0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3m7da"]
-_data = {
-"MonsterMusic02_FadeIn": SubResource("Animation_srbt5"),
-"MonsterMusic03_FadeIn": SubResource("Animation_s2548")
-}
 
 [node name="MainLevel" type="Node3D"]
 script = ExtResource("1_1hff5")
@@ -92,11 +54,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.36918, 0.00146294, -0.12220
 
 [node name="Sound" type="Node" parent="."]
 
-[node name="MonsterMusic_FadeIn" type="AnimationPlayer" parent="Sound"]
-root_node = NodePath("../../Gameplay/MonsterEvent03")
-libraries = {
-"": SubResource("AnimationLibrary_3m7da")
-}
+[node name="MusicManager" parent="Sound" instance=ExtResource("4_f7eka")]
 
 [node name="MonsterMusic01" type="AudioStreamPlayer3D" parent="Sound"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7326, 2.55393)
@@ -105,13 +63,11 @@ stream = ExtResource("5_6423e")
 [node name="MonsterMusic02" type="AudioStreamPlayer3D" parent="Sound"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7139, 1.28014)
 stream = ExtResource("6_4778u")
-volume_db = -80.0
 area_mask = 2
 
 [node name="MonsterMusic03" type="AudioStreamPlayer3D" parent="Sound"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75172, 0)
 stream = ExtResource("7_ghnrq")
-volume_db = -80.0
 area_mask = 4
 
 [node name="Player" parent="." instance=ExtResource("2_t5ga8")]
