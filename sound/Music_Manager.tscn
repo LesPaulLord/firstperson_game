@@ -1,9 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://djipnjqvphaj5"]
+[gd_scene load_steps=2 format=3 uid="uid://c7ok6yp5dvd8o"]
 
-[ext_resource type="Script" path="res://sound/Music_Manager.gd" id="1_lrcnh"]
+[sub_resource type="GDScript" id="GDScript_xy33h"]
+script/source = "extends Node
+
+var monsterMusic01 = load(\"res://sound/Monster_Theme_001_Bass.mp3\")
+var monsterMusic02 = load(\"res://sound/Monster_Theme_001_Drums.mp3\")
+var monsterMusic03 = load(\"res://sound/Monster_Theme_001_Keys.mp3\")
+
+func _ready():
+	pass
+
+func play_monsterMusic():
+	
+	print(\"music works\")
+	$MonsterMusic01.stream = monsterMusic01
+	$MonsterMusic01.play()
+	
+"
 
 [node name="MusicManager" type="Node"]
-script = ExtResource("1_lrcnh")
+script = SubResource("GDScript_xy33h")
 
 [node name="MonsterMusic01" type="AudioStreamPlayer" parent="."]
 volume_db = -80.0
