@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cvlgf3lprgn4"]
+[gd_scene load_steps=14 format=3 uid="uid://cvlgf3lprgn4"]
 
 [ext_resource type="Script" path="res://scripts/main_level.gd" id="1_1hff5"]
 [ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://levels/Env.tscn" id="1_68sgc"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://cl0xb3f7fql6w" path="res://sound/SFX_BGNoise_001.mp3" id="7_6hcjw"]
 [ext_resource type="AudioStream" uid="uid://capugqpiu55wg" path="res://sound/SFX_Wind_001.mp3" id="7_fu17m"]
 [ext_resource type="AudioStream" uid="uid://coujusol2xs3g" path="res://sound/Monster_Theme_001_Keys.mp3" id="7_ghnrq"]
+[ext_resource type="AudioStream" uid="uid://cnlp3kmfrqyot" path="res://sound/SFX_Wind_002.mp3" id="8_ffvfg"]
 
 [sub_resource type="Animation" id="Animation_srbt5"]
 resource_name = "MonsterMusic02_FadeIn"
@@ -121,9 +122,17 @@ max_distance = 20.0
 area_mask = 4
 attenuation_filter_cutoff_hz = 500.0
 
-[node name="Wind_001" type="AudioStreamPlayer3D" parent="Sound"]
+[node name="Wind_001_01" type="AudioStreamPlayer3D" parent="Sound"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.11124, 2.36477, -9.10357)
 stream = ExtResource("7_fu17m")
+autoplay = true
+max_distance = 15.0
+emission_angle_enabled = true
+emission_angle_degrees = 64.6
+
+[node name="Wind_002_01" type="AudioStreamPlayer3D" parent="Sound"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -5.5456, 1.21839, 1.57579)
+stream = ExtResource("8_ffvfg")
 autoplay = true
 max_distance = 15.0
 emission_angle_enabled = true
