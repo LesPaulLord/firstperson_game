@@ -82,7 +82,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
 [node name="Gameplay" type="Node" parent="."]
 
 [node name="MonsterEvent01" parent="Gameplay" instance=ExtResource("5_n4x6b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85839, 0, -7.99472)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85839, 0, -6.99435)
 
 [node name="MonsterEvent02" parent="Gameplay" instance=ExtResource("5_n4x6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95058, 0, 1.50924)
