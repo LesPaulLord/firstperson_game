@@ -6,10 +6,6 @@ extends Node3D
 @onready var end_game = get_node("/root/MainLevel/Gameplay/EndGame/MonsterEvent")
 @onready var event_number = 1
 
-var monsterMusic01 = load("res://sound/Monster_Theme_001_Bass.mp3")
-var monsterMusic02 = load("res://sound/Monster_Theme_001_Drums.mp3")
-var monsterMusic03 = load("res://sound/Monster_Theme_001_Keys.mp3")
-
 @onready var music_fader = $Sound/MonsterMusic_FadeIn
 var fade_duration := 2.00
 var fade_type := 1
