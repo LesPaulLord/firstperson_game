@@ -82,16 +82,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
 [node name="Gameplay" type="Node" parent="."]
 
 [node name="MonsterEvent01" parent="Gameplay" instance=ExtResource("5_n4x6b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29622, 0, -3.70365)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85839, 0, -7.99472)
 
 [node name="MonsterEvent02" parent="Gameplay" instance=ExtResource("5_n4x6b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92623, 0, 5.34075)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95058, 0, 1.50924)
 
 [node name="MonsterEvent03" parent="Gameplay" instance=ExtResource("5_n4x6b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.45685, 0.000166893, 2.25757)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69942, 0.000166893, -1.99923)
 
 [node name="EndGame" parent="Gameplay" instance=ExtResource("5_n4x6b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.36918, 0.00146294, -0.122201)
+transform = Transform3D(0.999981, -0.00465853, -0.00394912, 0.00466223, 0.999989, 0.000926463, 0.00394477, -0.000944845, 0.999992, 1.58789, 0.00146294, 3.02302)
 
 [node name="Sound" type="Node" parent="."]
 
