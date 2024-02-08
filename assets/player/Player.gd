@@ -3,7 +3,7 @@ extends CharacterBody3D
 const ACCEL = 10
 const DEACCEL = 30
 
-const SPEED = 3.0
+var SPEED = 3.0
 const MOUSE_SENSITIVITY = 0.06
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
@@ -59,7 +59,14 @@ func _physics_process(delta):
 		accel = ACCEL
 	else:
 		accel = DEACCEL
-
+		
+	# Debug cheat for going fast !!
+	if SPEED == 3.0 and Input.is_action_just_pressed("Sprint"):
+			SPEED = 12.0
+			
+	elif SPEED == 12.0 and Input.is_action_just_pressed("Sprint"):
+			SPEED = 3.0
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with a custom keymap depending on your control scheme. These strings default to the arrow keys layout.
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

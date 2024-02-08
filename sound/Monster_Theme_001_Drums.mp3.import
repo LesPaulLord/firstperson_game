@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Monster_Theme_001_Drums.mp3-6d1c986af2b01136b
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0.0
 bpm=0.0
 beat_count=0
