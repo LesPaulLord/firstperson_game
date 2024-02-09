@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://baxequbo4ylpi"]
+
+[ext_resource type="PackedScene" uid="uid://csmaijf2igvay" path="res://assets/Module_Blocky/SM_Floor_2x2_01a.glb" id="1_mc40l"]
+[ext_resource type="PackedScene" uid="uid://ymeo4ll7yg53" path="res://assets/Module_Blocky/SM_Wall_1x2_01a.glb" id="2_3rkqu"]
+[ext_resource type="PackedScene" uid="uid://boelkv6g1q7cw" path="res://assets/Props/SM_Couch_01a.glb" id="3_cv3pf"]
+
+[node name="Monster_Event_01_Level" type="Node3D"]
+
+[node name="SM_Floor_2x2_01a2" parent="." instance=ExtResource("1_mc40l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+
+[node name="SM_Floor_2x2_01a4" parent="." instance=ExtResource("1_mc40l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 1)
+
+[node name="SM_Floor_2x2_01a3" parent="." instance=ExtResource("1_mc40l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="SM_Floor_2x2_01a5" parent="." instance=ExtResource("1_mc40l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="SM_Wall_1x2_01a2" parent="." instance=ExtResource("2_3rkqu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, -1)
+
+[node name="SM_Wall_1x2_01a5" parent="." instance=ExtResource("2_3rkqu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0, -1)
+
+[node name="SM_Wall_1x2_01a3" parent="." instance=ExtResource("2_3rkqu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.45058e-08, 0, -1)
+
+[node name="SM_Wall_1x2_01a4" parent="." instance=ExtResource("2_3rkqu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -1)
+
+[node name="SM_Couch_01a2" parent="." instance=ExtResource("3_cv3pf")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -1, 0, -0.4)

@@ -9,11 +9,13 @@ var current_collider
 @onready var door_is_open = false
 @onready var player = get_node("/root/MainLevel/Player")
 @onready var door = get_tree().current_scene.get_node("Gameplay/Door_interactable")
+@onready var fadetoblack = get_tree().current_scene.get_node("BlackScreen")
 
 func _ready():
 	set_interaction_text("")
 
 func _process(_delta):
+	
 	var collider = get_collider()
 	
 	if is_colliding() and collider is Interactable_Item:
@@ -50,13 +52,9 @@ func _process(_delta):
 			player.lock_controller()
 			is_interacting = true
 			
-		# Remove interaction text and unlock player controller
-		elif Input.is_action_just_pressed("Interact") and is_interacting == true:
-			interaction_label.text = ("")
+			fadetoblack.animationBlack()
 			
-			player.unlock_controller()
-			is_interacting = false
-			
+		
 	elif is_colliding() and collider is Interactable_Door:
 		
 		if current_collider != collider and door_is_open == false:
@@ -80,6 +78,7 @@ func _process(_delta):
 	elif current_collider:
 		current_collider=null
 		set_interaction_text("")
+#endregion
 		
 func set_interaction_text(text):
 	if !text:
@@ -88,3 +87,4 @@ func set_interaction_text(text):
 	else:
 		interaction_label.set_text("Press E to interact")
 		interaction_label.set_visible(true)
+

@@ -5,6 +5,7 @@ extends Node3D
 @onready var monster_event03 = get_node("/root/MainLevel/Gameplay/MonsterEvent03/MonsterEvent")
 @onready var end_game = get_node("/root/MainLevel/Gameplay/EndGame/MonsterEvent")
 @onready var event_number = 1
+@onready var blackscreen = get_node("BlackScreen")
 
 @onready var music_fader = $Sound/MonsterMusic_FadeIn
 var fade_duration := 2.00
@@ -24,6 +25,11 @@ func _ready():
 	show_endgame.set_visible(false)
 	
 func _process(delta):
+	check_if_monsterevent_triggered()
+	#launch_Monster_Event_01_Sequence()
+	
+#region Monster Event Sequence Logic
+func check_if_monsterevent_triggered():
 	
 	var event_triggered01 = monster_event01.get("triggered")
 	var event_triggered02 = monster_event02.get("triggered")
@@ -77,7 +83,7 @@ func MonsterEvent02Called():
 	monster_event02.mainlevelconfirm()
 	
 	return
-
+	
 func MonsterEvent03Called():
 	print("setting up END GAME")
 	
@@ -92,7 +98,13 @@ func MonsterEvent03Called():
 	
 # End game when last event is run
 func MonsterEvent04Called():
+#endregion
 	get_tree().quit()
 	
 	return
 	
+#endregion
+	
+#func launch_Monster_Event_01_Sequence():
+	#if blackscreen.fade_to_black_done.connect():
+		#print("I did it")
