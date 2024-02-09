@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://baalhn4pvrxlm"]
+
+[ext_resource type="Script" path="res://assets/Gameplay/Door_Open.gd" id="1_i0iu1"]
+[ext_resource type="PackedScene" uid="uid://xs62ycskf270" path="res://assets/Gameplay/SM_Door_01a.glb" id="1_m3cls"]
+[ext_resource type="Script" path="res://scripts/interactable/Interactable_Door.gd" id="2_dhtm1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tgqd5"]
+size = Vector3(0.0696716, 2.00012, 0.798584)
+
+[sub_resource type="Animation" id="Animation_1lr0s"]
+resource_name = "Door_Open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SM_Door_01a2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jje8a"]
+_data = {
+"Door_Open": SubResource("Animation_1lr0s")
+}
+
+[node name="Door_interactable" type="Node3D"]
+script = ExtResource("1_i0iu1")
+
+[node name="SM_Door_01a2" parent="." instance=ExtResource("1_m3cls")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_Door_01a2"]
+collision_layer = 3
+script = ExtResource("2_dhtm1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Door_01a2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.034317, 1.00006, -0.400024)
+shape = SubResource("BoxShape3D_tgqd5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jje8a")
+}

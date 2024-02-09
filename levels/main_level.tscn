@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://cvlgf3lprgn4"]
+[gd_scene load_steps=16 format=3 uid="uid://cvlgf3lprgn4"]
 
 [ext_resource type="Script" path="res://scripts/main_level.gd" id="1_1hff5"]
 [ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://levels/Env.tscn" id="1_68sgc"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/player/Player.tscn" id="2_t5ga8"]
 [ext_resource type="PackedScene" uid="uid://b2qlvbgivd77s" path="res://assets/Gameplay/MonsterEvent01_Vent.tscn" id="4_ol5vi"]
+[ext_resource type="PackedScene" uid="uid://baalhn4pvrxlm" path="res://assets/Gameplay/Door_interactable.tscn" id="5_75yn0"]
 [ext_resource type="AudioStream" uid="uid://jv43jugfj0ts" path="res://sound/Monster_Theme_001_Bass.mp3" id="5_6423e"]
 [ext_resource type="PackedScene" uid="uid://b8gdforp2mtwu" path="res://assets/Gameplay/MonsterEvent.tscn" id="5_n4x6b"]
 [ext_resource type="AudioStream" uid="uid://d28b4umtrm044" path="res://sound/Monster_Theme_001_Drums.mp3" id="6_4778u"]
@@ -97,6 +98,9 @@ transform = Transform3D(0.999981, -0.00465853, -0.00394912, 0.00466223, 0.999989
 [node name="SM_VentTrap_01a2" parent="Gameplay" instance=ExtResource("4_ol5vi")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.4, 1.16853, -7.06885)
 
+[node name="Door_interactable" parent="Gameplay" instance=ExtResource("5_75yn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3298, 0, -9.0281)
+
 [node name="Sound" type="Node" parent="."]
 
 [node name="MonsterMusic_FadeIn" type="AnimationPlayer" parent="Sound"]
@@ -147,4 +151,4 @@ stream = ExtResource("7_6hcjw")
 autoplay = true
 
 [node name="Player" parent="." instance=ExtResource("2_t5ga8")]
-transform = Transform3D(-0.000468899, -3.31576e-05, -1, -0.000539427, 1, -3.29221e-05, 1, 0.000539412, -0.000468915, -3.72342, 1.04221, -6.89442)
+transform = Transform3D(-0.000468899, -3.31576e-05, -1, -0.000539427, 1, -3.29221e-05, 1, 0.000539412, -0.000468915, -2.64659, 1.04221, -5.58358)

@@ -75,3 +75,7 @@ q={
 "deadzone": 0.5,
 "events": []
 }
+
+[rendering]
+
+mesh_lod/lod_change/threshold_pixels=0.0

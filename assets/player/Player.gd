@@ -74,13 +74,6 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	if controller_locked == false and Input.is_action_just_pressed("Test_Controller_Lock"):
-		SPEED = 0
-		controller_locked = true
-		
-	elif controller_locked == true and Input.is_action_just_pressed("Test_Controller_Lock"):
-		SPEED = SPEED_DEFAULT
-		controller_locked = false
 
 func lock_controller():
 		SPEED = 0

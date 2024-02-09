@@ -6,7 +6,9 @@ var current_collider
 
 @onready var interaction_label = get_node("/root/MainLevel/UI/Label")
 @onready var is_interacting = false
+@onready var door_is_open = false
 @onready var player = get_node("/root/MainLevel/Player")
+@onready var door = get_tree().current_scene.get_node("Gameplay/Door_interactable")
 
 func _ready():
 	set_interaction_text("")
@@ -54,6 +56,26 @@ func _process(_delta):
 			
 			player.unlock_controller()
 			is_interacting = false
+			
+	elif is_colliding() and collider is Interactable_Door:
+		
+		if current_collider != collider and door_is_open == false:
+			set_interaction_text(collider.get_interaction_text())
+			current_collider = collider
+			
+		elif current_collider != collider and door_is_open == true:
+			interaction_label.text = ("")
+			
+		# Set the interaction text and lock player controller
+		if Input.is_action_just_pressed("Interact") and door_is_open == false:
+			collider.interact()
+			door.animation()
+			door_is_open = true
+			interaction_label.text = ("")
+			
+		# Remove interaction text and unlock player controller
+		elif Input.is_action_just_pressed("Interact") and door_is_open == true:
+			interaction_label.text = ("")
 			
 	elif current_collider:
 		current_collider=null
