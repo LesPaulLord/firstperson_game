@@ -5,6 +5,8 @@ extends RayCast3D
 var current_collider
 
 @onready var interaction_label = get_node("/root/MainLevel/UI/Label")
+@onready var is_interacting = false
+@onready var player = get_node("/root/MainLevel/Player")
 
 func _ready():
 	set_interaction_text("")
@@ -17,10 +19,21 @@ func _process(_delta):
 			set_interaction_text(collider.get_interaction_text())
 			current_collider = collider
 			
-		if Input.is_action_just_pressed("Interact"):
+		# Set the interaction text and lock player controller
+		if Input.is_action_just_pressed("Interact") and is_interacting == false:
 			set_interaction_text(collider.get_interaction_text())
 			collider.interact()
 			interaction_label.text = collider.get_prompt()
+			
+			player.lock_controller()
+			is_interacting = true
+			
+		# Remove interaction text and unlock player controller
+		elif Input.is_action_just_pressed("Interact") and is_interacting == true:
+			interaction_label.text = ("")
+			
+			player.unlock_controller()
+			is_interacting = false
 			
 	elif current_collider:
 		current_collider=null

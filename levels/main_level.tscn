@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://cvlgf3lprgn4"]
+[gd_scene load_steps=17 format=3 uid="uid://cvlgf3lprgn4"]
 
 [ext_resource type="Script" path="res://scripts/main_level.gd" id="1_1hff5"]
 [ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://levels/Env.tscn" id="1_68sgc"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/player/Player.tscn" id="2_t5ga8"]
+[ext_resource type="Script" path="res://scripts/interactable/Interactable.gd" id="4_1gw3k"]
 [ext_resource type="AudioStream" uid="uid://jv43jugfj0ts" path="res://sound/Monster_Theme_001_Bass.mp3" id="5_6423e"]
 [ext_resource type="PackedScene" uid="uid://b8gdforp2mtwu" path="res://assets/Gameplay/MonsterEvent.tscn" id="5_n4x6b"]
 [ext_resource type="AudioStream" uid="uid://d28b4umtrm044" path="res://sound/Monster_Theme_001_Drums.mp3" id="6_4778u"]
@@ -10,6 +11,11 @@
 [ext_resource type="AudioStream" uid="uid://capugqpiu55wg" path="res://sound/SFX_Wind_001.mp3" id="7_fu17m"]
 [ext_resource type="AudioStream" uid="uid://coujusol2xs3g" path="res://sound/Monster_Theme_001_Keys.mp3" id="7_ghnrq"]
 [ext_resource type="AudioStream" uid="uid://cnlp3kmfrqyot" path="res://sound/SFX_Wind_002.mp3" id="8_ffvfg"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_32de2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_33yjr"]
+size = Vector3(1, 2.32764, 1)
 
 [sub_resource type="Animation" id="Animation_srbt5"]
 resource_name = "MonsterMusic02_FadeIn"
@@ -93,6 +99,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69942, 0.000166893, -1.999
 [node name="EndGame" parent="Gameplay" instance=ExtResource("5_n4x6b")]
 transform = Transform3D(0.999981, -0.00465853, -0.00394912, 0.00466223, 0.999989, 0.000926463, 0.00394477, -0.000944845, 0.999992, 1.58789, 0.00146294, 3.02302)
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Gameplay"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8641, 1.28927, -7.15027)
+mesh = SubResource("CylinderMesh_32de2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Gameplay/MeshInstance3D"]
+collision_layer = 3
+script = ExtResource("4_1gw3k")
+prompt_message = "Eti Gros Pipi"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gameplay/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.139404, 0)
+shape = SubResource("BoxShape3D_33yjr")
+
 [node name="Sound" type="Node" parent="."]
 
 [node name="MonsterMusic_FadeIn" type="AnimationPlayer" parent="Sound"]
@@ -143,4 +162,4 @@ stream = ExtResource("7_6hcjw")
 autoplay = true
 
 [node name="Player" parent="." instance=ExtResource("2_t5ga8")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.56307, 1.04221, -3.80425)
+transform = Transform3D(1, 0, 1.74845e-07, 0, 1, 0, -1.74845e-07, 0, 1, -1.61649, 1.04221, -5.58245)

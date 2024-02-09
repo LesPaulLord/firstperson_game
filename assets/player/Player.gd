@@ -3,7 +3,11 @@ extends CharacterBody3D
 const ACCEL = 10
 const DEACCEL = 30
 
-var SPEED = 3.0
+const SPEED_DEFAULT = 3.0
+var SPEED = SPEED_DEFAULT
+
+var controller_locked = false
+
 const MOUSE_SENSITIVITY = 0.06
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
@@ -12,7 +16,6 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var camera
 var rotation_helper
 var dir = Vector3.ZERO
-var flashlight
 
 func _ready():
 	camera = $rotation_helper/Camera3D
@@ -23,29 +26,19 @@ func _ready():
 	
 func _input(event):
 	# This section controls your player camera. Sensitivity can be changed.
-	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED and controller_locked == false:
 		rotation_helper.rotate_x(deg_to_rad(event.relative.y * MOUSE_SENSITIVITY * -2))
 		self.rotate_y(deg_to_rad(event.relative.x * MOUSE_SENSITIVITY * -2))
 
 		var camera_rot = rotation_helper.rotation
 		camera_rot.x = clampf(camera_rot.x, -1.4, 1.4)
 		rotation_helper.rotation = camera_rot
-	
-	# Release/Grab Mouse for debugging. You can change or replace this.
-	if Input.is_action_just_pressed("ui_cancel"):
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		else:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
-	# Flashlight toggle. Defaults to F on Keyboard.
-	if event is InputEventKey:
-		if event.pressed and event.keycode == KEY_F:
-			if flashlight.is_visible_in_tree() and not event.echo:
-				flashlight.hide()
-			elif not event.echo:
-				flashlight.show()
-
+		
+	elif event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED and controller_locked == true:
+		
+		var mousemotion = InputEventMouseMotion
+		mousemotion = Vector2(0, 0)
+		
 func _physics_process(delta):
 	
 	# Add the gravity. Pulls value from project settings.
@@ -80,3 +73,19 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	
+	if controller_locked == false and Input.is_action_just_pressed("Test_Controller_Lock"):
+		SPEED = 0
+		controller_locked = true
+		
+	elif controller_locked == true and Input.is_action_just_pressed("Test_Controller_Lock"):
+		SPEED = SPEED_DEFAULT
+		controller_locked = false
+
+func lock_controller():
+		SPEED = 0
+		controller_locked = true
+		
+func unlock_controller():
+		SPEED = SPEED_DEFAULT
+		controller_locked = false
