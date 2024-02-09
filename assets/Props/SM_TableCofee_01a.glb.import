@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://boelkv6g1q7cw"
-path="res://.godot/imported/SM_Couch_01a.glb-48c7edd434cabf079ddcd5b7dc5b3c37.scn"
+uid="uid://bseeinvswsrdy"
+path="res://.godot/imported/SM_TableCofee_01a.glb-fd725910ade1d0bde635a17c961e8a5c.scn"
 
 [deps]
 
-source_file="res://assets/Props/SM_Couch_01a.glb"
-dest_files=["res://.godot/imported/SM_Couch_01a.glb-48c7edd434cabf079ddcd5b7dc5b3c37.scn"]
+source_file="res://assets/Props/SM_TableCofee_01a.glb"
+dest_files=["res://.godot/imported/SM_TableCofee_01a.glb-fd725910ade1d0bde635a17c961e8a5c.scn"]
 
 [params]
 
@@ -29,12 +29,6 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:SM_Couch_01a": {
-"physics/shape_type": 1
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

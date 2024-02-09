@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bdijoewt202pd"
-path="res://.godot/imported/SM_WallCornerStairs_Out_2x2_01a.glb-5506537d3a410dc1add0c461fba21d64.scn"
+uid="uid://dv83xp348anoj"
+path="res://.godot/imported/SM_WallCornerStairs_In_1x2_01a.glb-bab17c1d03ad12a08f11b35a6e8e0f81.scn"
 
 [deps]
 
-source_file="res://assets/Module_Blocky/SM_WallCornerStairs_Out_2x2_01a.glb"
-dest_files=["res://.godot/imported/SM_WallCornerStairs_Out_2x2_01a.glb-5506537d3a410dc1add0c461fba21d64.scn"]
+source_file="res://assets/Module_Blocky/SM_WallCornerStairs_In_1x2_01a.glb"
+dest_files=["res://.godot/imported/SM_WallCornerStairs_In_1x2_01a.glb-bab17c1d03ad12a08f11b35a6e8e0f81.scn"]
 
 [params]
 
@@ -29,12 +29,6 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:SM_WallCornerStairs_Out_2x2_01a": {
-"physics/shape_type": 1
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
