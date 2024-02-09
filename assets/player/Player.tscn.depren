@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/player/Player.gd" id="1_1fhis"]
-[ext_resource type="Script" path="res://assets/player/Interaction/Interaction_Item.gd" id="2_nocjs"]
+[ext_resource type="Script" path="res://assets/player/Interaction/Item_Interaction_Item.gd" id="2_n06d0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tdn1f"]
 radius = 0.2
@@ -24,7 +24,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 [node name="interaction_raycast" type="RayCast3D" parent="rotation_helper/Camera3D"]
 target_position = Vector3(0, 0, -2)
 collision_mask = 2
-script = ExtResource("2_nocjs")
+script = ExtResource("2_n06d0")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3

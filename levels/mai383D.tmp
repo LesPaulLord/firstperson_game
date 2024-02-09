@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/main_level.gd" id="1_1hff5"]
 [ext_resource type="PackedScene" uid="uid://bxb4we6clsdqp" path="res://levels/Env.tscn" id="1_68sgc"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/player/Player.tscn" id="2_t5ga8"]
-[ext_resource type="Script" path="res://scripts/interactable/Interactable_Item.gd" id="4_1gw3k"]
+[ext_resource type="Script" path="res://scripts/interactable/Item_Interactable.gd" id="4_1gw3k"]
 [ext_resource type="AudioStream" uid="uid://jv43jugfj0ts" path="res://sound/Monster_Theme_001_Bass.mp3" id="5_6423e"]
 [ext_resource type="PackedScene" uid="uid://b8gdforp2mtwu" path="res://assets/Gameplay/MonsterEvent.tscn" id="5_n4x6b"]
 [ext_resource type="AudioStream" uid="uid://d28b4umtrm044" path="res://sound/Monster_Theme_001_Drums.mp3" id="6_4778u"]

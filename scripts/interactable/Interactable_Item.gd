@@ -1,6 +1,6 @@
 extends Node
 
-class_name interactable
+class_name Interactable
 
 @export var prompt_message = "Interact"
 

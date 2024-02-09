@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bxhd5gkg8tbf2"]
 
 [ext_resource type="Script" path="res://scripts/DoorScript.gd" id="1_wxdwg"]
-[ext_resource type="Script" path="res://scripts/interactable/Interactable.gd" id="2_8m6ei"]
+[ext_resource type="Script" path="res://scripts/interactable/Interactable_Item.gd" id="2_8m6ei"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ktbvw"]
 size = Vector3(1, 2, 0.1)
