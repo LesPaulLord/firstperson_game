@@ -1,6 +1,6 @@
 extends Node
 
-class_name Interactable_Item
+class_name Interactable_MonsterEvent
 
 @export var prompt_message = "Interact"
 

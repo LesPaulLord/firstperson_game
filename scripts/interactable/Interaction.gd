@@ -14,7 +14,7 @@ func _ready():
 func _process(_delta):
 	var collider = get_collider()
 	
-	if is_colliding() and collider is Interactable:
+	if is_colliding() and collider is Interactable_Item:
 		if current_collider != collider:
 			set_interaction_text(collider.get_interaction_text())
 			current_collider = collider
@@ -24,6 +24,26 @@ func _process(_delta):
 			set_interaction_text(collider.get_interaction_text())
 			collider.interact()
 			interaction_label.text = collider.get_prompt()
+			
+			player.lock_controller()
+			is_interacting = true
+			
+		# Remove interaction text and unlock player controller
+		elif Input.is_action_just_pressed("Interact") and is_interacting == true:
+			interaction_label.text = ("")
+			
+			player.unlock_controller()
+			is_interacting = false
+			
+	elif is_colliding() and collider is Interactable_MonsterEvent:
+		if current_collider != collider:
+			set_interaction_text(collider.get_interaction_text())
+			current_collider = collider
+			
+		# Set the interaction text and lock player controller
+		if Input.is_action_just_pressed("Interact") and is_interacting == false:
+			collider.interact()
+			interaction_label.text = ("")
 			
 			player.lock_controller()
 			is_interacting = true
