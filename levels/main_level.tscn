@@ -93,16 +93,16 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.2, 
 script = ExtResource("1_1hff5")
 
 [node name="MonsterEvent01" parent="Gameplay" instance=ExtResource("5_n4x6b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6584, 0, -5.13114)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85839, 0, -8.93114)
 
 [node name="MonsterEvent02" parent="Gameplay" instance=ExtResource("5_n4x6b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7506, 0, -5.49076)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95058, 0, 1.50924)
 
 [node name="MonsterEvent03" parent="Gameplay" instance=ExtResource("5_n4x6b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8994, 0.000166893, -5.59923)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69942, 0.000166893, -1.99923)
 
 [node name="EndGame" parent="Gameplay" instance=ExtResource("5_n4x6b")]
-transform = Transform3D(0.999981, -0.00465853, -0.00394912, 0.00466223, 0.999989, 0.000926463, 0.00394477, -0.000944845, 0.999992, -14.0121, 0.00146294, -5.57698)
+transform = Transform3D(0.999981, -0.00465853, -0.00394912, 0.00466223, 0.999989, 0.000926463, 0.00394477, -0.000944845, 0.999992, 1.58789, 0.00146294, 3.02302)
 
 [node name="SM_VentTrap_01a2" parent="Gameplay" instance=ExtResource("4_ol5vi")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.4, 1.16853, -7.06885)
@@ -125,20 +125,20 @@ libraries = {
 }
 
 [node name="MonsterMusic01" type="AudioStreamPlayer3D" parent="Sound"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.92, 1.7326, -11.1256)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.32003, 1.7326, -3.72562)
 stream = ExtResource("5_6423e")
 max_distance = 20.0
 attenuation_filter_cutoff_hz = 500.0
 
 [node name="MonsterMusic02" type="AudioStreamPlayer3D" parent="Sound"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9492, 1.7139, -9.29172)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.94918, 1.7139, 5.30828)
 stream = ExtResource("6_4778u")
 max_distance = 20.0
 area_mask = 2
 attenuation_filter_cutoff_hz = 500.0
 
 [node name="MonsterMusic03" type="AudioStreamPlayer3D" parent="Sound"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9556, 1.75172, -7.54398)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.44445, 1.75172, 2.25602)
 stream = ExtResource("7_ghnrq")
 volume_db = -80.0
 max_distance = 20.0
@@ -166,4 +166,4 @@ stream = ExtResource("7_6hcjw")
 autoplay = true
 
 [node name="Player" parent="." instance=ExtResource("2_t5ga8")]
-transform = Transform3D(-1, -0.000539412, 0.000468959, -0.000539427, 1, -3.29221e-05, -0.000468943, -3.31576e-05, -1, 1.55341, 1.04221, 0.0164202)
+transform = Transform3D(-0.000468899, -3.31576e-05, -1, -0.000539427, 1, -3.29221e-05, 1, 0.000539412, -0.000468915, -4.04659, 1.04221, -6.98358)
