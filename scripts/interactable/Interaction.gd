@@ -9,7 +9,7 @@ var current_collider
 @onready var door_is_open = false
 @onready var player = get_node("/root/MainLevel/Player")
 @onready var door = get_tree().current_scene.get_node("Gameplay/Door_interactable")
-@onready var fadetoblack = get_tree().current_scene.get_node("BlackScreen")
+@onready var fadetoblack = get_node("/root/MainLevel/BlackScreen")
 
 func _ready():
 	set_interaction_text("")

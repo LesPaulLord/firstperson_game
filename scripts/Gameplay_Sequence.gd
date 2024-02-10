@@ -1,4 +1,4 @@
-extends Node3D
+extends Node
 
 @onready var monster_event01 = get_node("/root/MainLevel/Gameplay/MonsterEvent01/MonsterEvent")
 @onready var monster_event02 = get_node("/root/MainLevel/Gameplay/MonsterEvent02/MonsterEvent")
@@ -6,17 +6,20 @@ extends Node3D
 @onready var end_game = get_node("/root/MainLevel/Gameplay/EndGame/MonsterEvent")
 @onready var event_number = 1
 @onready var blackscreen = get_node("BlackScreen")
+@onready var mainlevel = get_node("MainLevel")
 
 @onready var music_fader = $Sound/MonsterMusic_FadeIn
 var fade_duration := 2.00
 var fade_type := 1
 
+signal camera_switch_01
+
 func _ready():
 	
-	var show_event01 = $Gameplay/MonsterEvent01
-	var show_event02 = $Gameplay/MonsterEvent02
-	var show_event03 = $Gameplay/MonsterEvent03
-	var show_endgame = $Gameplay/EndGame
+	var show_event01 = $MonsterEvent01
+	var show_event02 = $MonsterEvent02
+	var show_event03 = $MonsterEvent03
+	var show_endgame = $EndGame
 	
 	# setting basic visibility of monster events
 	show_event01.set_visible(true)
@@ -26,7 +29,6 @@ func _ready():
 	
 func _process(delta):
 	check_if_monsterevent_triggered()
-	#launch_Monster_Event_01_Sequence()
 	
 #region Monster Event Sequence Logic
 func check_if_monsterevent_triggered():
@@ -105,6 +107,4 @@ func MonsterEvent04Called():
 	
 #endregion
 	
-#func launch_Monster_Event_01_Sequence():
-	#if blackscreen.fade_to_black_done.connect():
-		#print("I did it")
+
