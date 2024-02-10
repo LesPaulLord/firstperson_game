@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://0r6lwi8kqghn"]
+
+[ext_resource type="PackedScene" uid="uid://xs62ycskf270" path="res://assets/Gameplay/SM_Door_01a.glb" id="1_os3uy"]
+[ext_resource type="Script" path="res://scripts/interactable/Interactable_Door_Front.gd" id="2_r25jc"]
+
+[node name="Front_Door" instance=ExtResource("1_os3uy")]
+
+[node name="SM_Door_01a" parent="SM_Door_01a" index="0"]
+collision_layer = 3
+script = ExtResource("2_r25jc")
+prompt_message = "What ? The front door is locked from the outside..."
+
+[node name="CollisionShape3D" parent="SM_Door_01a/StaticBody3D" index="0"]
+visible = false
