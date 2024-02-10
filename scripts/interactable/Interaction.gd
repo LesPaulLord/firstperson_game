@@ -6,10 +6,14 @@ var current_collider
 
 @onready var interaction_label = get_node("/root/MainLevel/UI/Label")
 @onready var is_interacting = false
+@onready var monsterevent_is_current = false
+@onready var monsterevent_01_done = false
 @onready var door_is_open = false
 @onready var player = get_node("/root/MainLevel/Player")
 @onready var door = get_tree().current_scene.get_node("Gameplay/Door_interactable")
-@onready var fadetoblack = get_node("/root/MainLevel/BlackScreen")
+
+signal start_MonsterEvent_01
+signal end_MonsterEvent_01
 
 func _ready():
 	set_interaction_text("")
@@ -40,21 +44,26 @@ func _process(_delta):
 			is_interacting = false
 			
 	elif is_colliding() and collider is Interactable_MonsterEvent:
-		if current_collider != collider:
+		if current_collider != collider and monsterevent_01_done == false:
 			set_interaction_text(collider.get_interaction_text())
 			current_collider = collider
 			
 		# Set the interaction text and lock player controller
-		if Input.is_action_just_pressed("Interact") and is_interacting == false:
+		if Input.is_action_just_pressed("Interact") and is_interacting == false and monsterevent_is_current == false and monsterevent_01_done == false:
 			collider.interact()
 			interaction_label.text = ("")
 			
 			player.lock_controller()
 			is_interacting = true
 			
-			fadetoblack.animationBlack()
+			emit_signal("start_MonsterEvent_01")
 			
-		
+		elif Input.is_action_just_pressed("Interact") and is_interacting == true and monsterevent_is_current == true:
+			emit_signal("end_MonsterEvent_01")
+			monsterevent_is_current = false
+			is_interacting = false
+			monsterevent_01_done = true
+			
 	elif is_colliding() and collider is Interactable_Door:
 		
 		if current_collider != collider and door_is_open == false:
@@ -81,10 +90,17 @@ func _process(_delta):
 #endregion
 		
 func set_interaction_text(text):
+	
 	if !text:
 		interaction_label.set_text("")
 		interaction_label.set_visible(false)
 	else:
 		interaction_label.set_text("Press E to interact")
 		interaction_label.set_visible(true)
+		
+func monster_event_is_true():
+	monsterevent_is_current = true
+	
+func monster_event_is_false():
+	monsterevent_is_current = false
 
