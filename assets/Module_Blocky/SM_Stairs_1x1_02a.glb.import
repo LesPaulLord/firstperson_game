@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://deyrn3y5tsluh"
-path="res://.godot/imported/SM_WallCornerStairs_In_1x2_01a.glb-bab17c1d03ad12a08f11b35a6e8e0f81.scn"
+uid="uid://c2o2o3m7kf6i5"
+path="res://.godot/imported/SM_Stairs_1x1_02a.glb-f82526c79dfb2c0bc0e428914fdad543.scn"
 
 [deps]
 
-source_file="res://assets/Module_Blocky/SM_WallCornerStairs_In_1x2_01a.glb"
-dest_files=["res://.godot/imported/SM_WallCornerStairs_In_1x2_01a.glb-bab17c1d03ad12a08f11b35a6e8e0f81.scn"]
+source_file="res://assets/Module_Blocky/SM_Stairs_1x1_02a.glb"
+dest_files=["res://.godot/imported/SM_Stairs_1x1_02a.glb-f82526c79dfb2c0bc0e428914fdad543.scn"]
 
 [params]
 

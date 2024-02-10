@@ -1,0 +1,104 @@
+[gd_scene load_steps=11 format=3 uid="uid://c2k7obl4o0122"]
+
+[ext_resource type="PackedScene" uid="uid://ymeo4ll7yg53" path="res://assets/Module_Blocky/SM_Wall_1x2_01a.glb" id="1_ynt2o"]
+[ext_resource type="PackedScene" uid="uid://cnnbauvrircor" path="res://assets/Module_Blocky/SM_Wall_1x1_01a.glb" id="2_cr478"]
+[ext_resource type="PackedScene" uid="uid://csmaijf2igvay" path="res://assets/Module_Blocky/SM_Floor_2x2_01a.glb" id="3_7l2u4"]
+[ext_resource type="PackedScene" uid="uid://2wvl14edsqoo" path="res://assets/Module_Blocky/SM_Floor_1x2_01a.glb" id="4_0b7om"]
+[ext_resource type="PackedScene" uid="uid://drunl1yjysb31" path="res://assets/Gameplay/SM_Manequin_01a.glb" id="5_1245h"]
+[ext_resource type="PackedScene" uid="uid://d23gnf5sumqpl" path="res://assets/Module_Blocky/SM_WallCorner_Out_1x2_01a.glb" id="6_a4mih"]
+[ext_resource type="PackedScene" uid="uid://bseeinvswsrdy" path="res://assets/Props/SM_TableCofee_01a.glb" id="7_7tnel"]
+[ext_resource type="PackedScene" uid="uid://bwqtgfjrc486h" path="res://assets/Props/SM_Couch_01b.glb" id="8_yaoyr"]
+[ext_resource type="PackedScene" uid="uid://dpoxumvn8mas4" path="res://assets/Props/SM_Television_01a.glb" id="9_q857b"]
+[ext_resource type="PackedScene" uid="uid://n4otgtri7tgu" path="res://assets/Module_Blocky/SM_Floor_1x1_01a.glb" id="10_q7io7"]
+
+[node name="LivingRoom01a" type="Node3D"]
+
+[node name="SM_Wall_1x2_01a6" parent="." instance=ExtResource("1_ynt2o")]
+transform = Transform3D(-0.000355944, -2.53706e-05, -1, 0.000141864, 1, -2.54114e-05, 1, -0.000141871, -0.000355941, 1.00038, -5.10312e-05, 0.201405)
+
+[node name="SM_Wall_1x2_01a4" parent="." instance=ExtResource("1_ynt2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="SM_Wall_1x1_01a16" parent="." instance=ExtResource("2_cr478")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1.93715e-07)
+
+[node name="SM_Wall_1x1_01a24" parent="." instance=ExtResource("2_cr478")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, -5)
+
+[node name="SM_Floor_1x2_01a12" parent="." instance=ExtResource("4_0b7om")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 0, 1.93715e-07)
+
+[node name="SM_Manequin_01a2" parent="." instance=ExtResource("5_1245h")]
+transform = Transform3D(-4.37114e-08, -1.06581e-14, -1, 0, 1, -1.06581e-14, 1, 0, -4.37114e-08, 0.70587, 0.6, -4.13122)
+
+[node name="SM_WallCorner_Out_1x2_01a2" parent="." instance=ExtResource("6_a4mih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, 0.2)
+
+[node name="SM_Television_01a2" parent="." instance=ExtResource("9_q857b")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.8, 0, -1.1)
+
+[node name="SM_Floor_1x1_01a14" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0, -4)
+
+[node name="SM_Floor_1x1_01a15" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0, -3)
+
+[node name="SM_Floor_1x1_01a19" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0, -2)
+
+[node name="SM_Floor_1x1_01a23" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0, -1)
+
+[node name="SM_Floor_1x1_01a27" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0, 1.93715e-07)
+
+[node name="SM_Wall_1x1_01a17" parent="." instance=ExtResource("2_cr478")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+
+[node name="SM_Wall_1x1_01a20" parent="." instance=ExtResource("2_cr478")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.63913e-07, 0, 0.2)
+
+[node name="SM_Wall_1x1_01a21" parent="." instance=ExtResource("2_cr478")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -4.8)
+
+[node name="SM_Floor_2x2_01a26" parent="." instance=ExtResource("3_7l2u4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+
+[node name="SM_WallCorner_Out_1x2_01a5" parent="." instance=ExtResource("6_a4mih")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 2, 0, -5)
+
+[node name="SM_WallCorner_Out_1x2_01a7" parent="." instance=ExtResource("6_a4mih")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.8, 0, -0.8)
+
+[node name="SM_TableCofee_01a3" parent="." instance=ExtResource("7_7tnel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, -2.9)
+
+[node name="SM_Couch_01b3" parent="." instance=ExtResource("8_yaoyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, -4.8)
+
+[node name="SM_Floor_1x1_01a16" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0, -4)
+
+[node name="SM_Floor_1x1_01a17" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0, -3)
+
+[node name="SM_Floor_1x1_01a20" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0, -2)
+
+[node name="SM_Floor_1x1_01a24" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0, -1)
+
+[node name="SM_Floor_1x1_01a21" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
+
+[node name="SM_Floor_1x1_01a25" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="SM_Floor_1x1_01a22" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="SM_Floor_1x1_01a26" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+
+[node name="SM_Floor_1x1_01a28" parent="." instance=ExtResource("10_q7io7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0, 1.93715e-07)

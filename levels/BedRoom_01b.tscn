@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://sif0mxlg283j"]
+
+[ext_resource type="PackedScene" uid="uid://ymeo4ll7yg53" path="res://assets/Module_Blocky/SM_Wall_1x2_01a.glb" id="1_841qi"]
+[ext_resource type="PackedScene" uid="uid://dxxnkysmhafyl" path="res://assets/Module_Blocky/SM_WallDoor_1x2_01a.glb" id="2_ox0vl"]
+[ext_resource type="PackedScene" uid="uid://cnnbauvrircor" path="res://assets/Module_Blocky/SM_Wall_1x1_01a.glb" id="3_77jej"]
+[ext_resource type="PackedScene" uid="uid://csmaijf2igvay" path="res://assets/Module_Blocky/SM_Floor_2x2_01a.glb" id="4_24h20"]
+[ext_resource type="PackedScene" uid="uid://2wvl14edsqoo" path="res://assets/Module_Blocky/SM_Floor_1x2_01a.glb" id="5_d5uqr"]
+[ext_resource type="PackedScene" uid="uid://ia0ho8homme7" path="res://assets/Module_Blocky/SM_WallWindow_1x2_01b.glb" id="6_3011w"]
+[ext_resource type="PackedScene" uid="uid://d23gnf5sumqpl" path="res://assets/Module_Blocky/SM_WallCorner_Out_1x2_01a.glb" id="7_qscr7"]
+
+[node name="BedRoom01b" type="Node3D"]
+
+[node name="SM_Wall_1x2_01a14" parent="." instance=ExtResource("1_841qi")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2.8, 0, -3)
+
+[node name="SM_WallDoor_1x2_01a4" parent="." instance=ExtResource("2_ox0vl")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0.2)
+
+[node name="SM_Wall_1x1_01a22" parent="." instance=ExtResource("3_77jej")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 3, 0, -2.83122e-07)
+
+[node name="SM_Wall_1x1_01a5" parent="." instance=ExtResource("3_77jej")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0.2)
+
+[node name="SM_Floor_2x2_01a17" parent="." instance=ExtResource("4_24h20")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.93715e-07)
+
+[node name="SM_Floor_2x2_01a20" parent="." instance=ExtResource("4_24h20")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="SM_Floor_1x2_01a5" parent="." instance=ExtResource("5_d5uqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="SM_Floor_1x2_01a6" parent="." instance=ExtResource("5_d5uqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1.93715e-07)
+
+[node name="SM_WallWindow_1x2_01b2" parent="." instance=ExtResource("6_3011w")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -3.8)
+
+[node name="SM_WallCorner_Out_1x2_01a7" parent="." instance=ExtResource("7_qscr7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -4)
