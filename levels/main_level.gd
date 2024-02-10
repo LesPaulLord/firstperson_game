@@ -3,6 +3,7 @@ extends Node3D
 func _ready():
 	
 	# Monster_Event 01 sequence signal activations
+	
 	$Player/rotation_helper/Camera3D/interaction_raycast.start_MonsterEvent_01.connect($BlackScreen.animationBlack)
 	
 	$BlackScreen.fade_to_black_done.connect(self.camera_switch_01)

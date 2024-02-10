@@ -7,7 +7,9 @@ var current_collider
 @onready var interaction_label = get_node("/root/MainLevel/UI/Label")
 @onready var is_interacting = false
 @onready var monsterevent_is_current = false
+@onready var monsterevent_01_ready = false
 @onready var monsterevent_01_done = false
+@onready var door_front_interacted = false
 @onready var door_is_open = false
 @onready var player = get_node("/root/MainLevel/Player")
 @onready var door = get_tree().current_scene.get_node("Gameplay/Door_interactable")
@@ -44,12 +46,12 @@ func _process(_delta):
 			is_interacting = false
 			
 	elif is_colliding() and collider is Interactable_MonsterEvent:
-		if current_collider != collider and monsterevent_01_done == false:
+		if current_collider != collider and monsterevent_01_done == false and monsterevent_01_ready == true:
 			set_interaction_text(collider.get_interaction_text())
 			current_collider = collider
 			
 		# Set the interaction text and lock player controller
-		if Input.is_action_just_pressed("Interact") and is_interacting == false and monsterevent_is_current == false and monsterevent_01_done == false:
+		if Input.is_action_just_pressed("Interact") and monsterevent_01_ready == true and is_interacting == false and monsterevent_is_current == false and monsterevent_01_done == false:
 			collider.interact()
 			interaction_label.text = ("")
 			
@@ -64,7 +66,38 @@ func _process(_delta):
 			is_interacting = false
 			monsterevent_01_done = true
 			
-	elif is_colliding() and collider is Interactable_Door:
+	elif is_colliding() and collider is Interactable_Door_Front:
+		
+		if current_collider != collider:
+			set_interaction_text(collider.get_interaction_text())
+			current_collider = collider
+			
+		# Set the interaction text and lock player controller
+		if Input.is_action_just_pressed("Interact") and door_front_interacted == false and is_interacting == false:
+			collider.interact()
+			interaction_label.text = collider.get_prompt()
+			
+			player.lock_controller()
+			is_interacting = true
+			
+			door_front_interacted = true
+			monsterevent_01_ready = true
+			
+		elif Input.is_action_just_pressed("Interact") and door_front_interacted == true and is_interacting == false:
+			collider.interact()
+			interaction_label.text = collider.get_prompt()
+			
+			player.lock_controller()
+			is_interacting = true
+			
+		elif Input.is_action_just_pressed("Interact") and is_interacting == true:
+			collider.interact()
+			interaction_label.text = ("")
+			
+			player.unlock_controller()
+			is_interacting = false
+			
+	elif is_colliding() and collider is Interactable_Door_Open:
 		
 		if current_collider != collider and door_is_open == false:
 			set_interaction_text(collider.get_interaction_text())
