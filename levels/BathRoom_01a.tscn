@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://c81fydhfwf5ma"]
+
+[ext_resource type="PackedScene" uid="uid://ymeo4ll7yg53" path="res://assets/Module_Blocky/SM_Wall_1x2_01a.glb" id="1_1ps37"]
+[ext_resource type="PackedScene" uid="uid://cnnbauvrircor" path="res://assets/Module_Blocky/SM_Wall_1x1_01a.glb" id="2_aguy1"]
+[ext_resource type="PackedScene" uid="uid://csmaijf2igvay" path="res://assets/Module_Blocky/SM_Floor_2x2_01a.glb" id="3_kdbp7"]
+[ext_resource type="PackedScene" uid="uid://2wvl14edsqoo" path="res://assets/Module_Blocky/SM_Floor_1x2_01a.glb" id="4_hjlqy"]
+
+[node name="BathRoom01a" type="Node3D"]
+
+[node name="SM_Floor_1x2_01a2" parent="." instance=ExtResource("4_hjlqy")]
+
+[node name="SM_Floor_1x2_01a3" parent="." instance=ExtResource("4_hjlqy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="SM_Floor_2x2_01a2" parent="." instance=ExtResource("3_kdbp7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
+
+[node name="SM_Floor_2x2_01a3" parent="." instance=ExtResource("3_kdbp7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="SM_Wall_1x2_01a2" parent="." instance=ExtResource("1_1ps37")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0)
+
+[node name="SM_Wall_1x2_01a3" parent="." instance=ExtResource("1_1ps37")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -2)
+
+[node name="SM_Wall_1x2_01a4" parent="." instance=ExtResource("1_1ps37")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -3.8)
+
+[node name="SM_Wall_1x2_01a5" parent="." instance=ExtResource("1_1ps37")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2.8, 0, -4)
+
+[node name="SM_Wall_1x2_01a6" parent="." instance=ExtResource("1_1ps37")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2.8, 0, -2)
+
+[node name="SM_Wall_1x1_01a2" parent="." instance=ExtResource("2_aguy1")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -3.8)
