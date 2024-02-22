@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bae5aa4ph2jy"]
+
+[ext_resource type="PackedScene" uid="uid://ovc4eb2by7gw" path="res://assets/Characters/Monster_01/Monster_01_low.glb" id="1_l78dy"]
+[ext_resource type="Texture2D" uid="uid://dl2chm8fkxn38" path="res://assets/Characters/Monster_01/Monster_D.tga" id="2_72grv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjlvu"]
+cull_mode = 2
+shading_mode = 2
+albedo_texture = ExtResource("2_72grv")
+
+[node name="Monster_01_low" instance=ExtResource("1_l78dy")]
+
+[node name="RetopoFlow" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_kjlvu")

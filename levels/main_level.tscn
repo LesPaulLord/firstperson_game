@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cvlgf3lprgn4"]
+[gd_scene load_steps=20 format=3 uid="uid://cvlgf3lprgn4"]
 
 [ext_resource type="Script" path="res://scripts/Gameplay_Sequence.gd" id="1_1hff5"]
 [ext_resource type="Script" path="res://levels/main_level.gd" id="1_23o41"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://coujusol2xs3g" path="res://sound/Monster_Theme_001_Keys.mp3" id="7_ghnrq"]
 [ext_resource type="AudioStream" uid="uid://cnlp3kmfrqyot" path="res://sound/SFX_Wind_002.mp3" id="8_ffvfg"]
 [ext_resource type="PackedScene" uid="uid://baxequbo4ylpi" path="res://levels/Monster_Event_01_Level.tscn" id="13_qp2jx"]
+[ext_resource type="PackedScene" uid="uid://bae5aa4ph2jy" path="res://assets/Characters/Monster_01/monster_01_low.tscn" id="16_siior"]
 
 [sub_resource type="Animation" id="Animation_srbt5"]
 resource_name = "MonsterMusic02_FadeIn"
@@ -167,3 +168,6 @@ autoplay = true
 
 [node name="Player" parent="." instance=ExtResource("2_t5ga8")]
 transform = Transform3D(-1, -0.000539412, 0.000468959, -0.000539427, 1, -3.29221e-05, -0.000468943, -3.31576e-05, -1, 1.55341, 1.04221, 0.0164202)
+
+[node name="Monster_01_low" parent="." instance=ExtResource("16_siior")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0, 0.4)

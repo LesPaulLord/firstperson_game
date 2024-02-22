@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://csmaijf2igvay" path="res://assets/Module_Blocky/SM_Floor_2x2_01a.glb" id="5_e4u5h"]
 [ext_resource type="PackedScene" uid="uid://2wvl14edsqoo" path="res://assets/Module_Blocky/SM_Floor_1x2_01a.glb" id="6_aij84"]
 [ext_resource type="PackedScene" uid="uid://n4otgtri7tgu" path="res://assets/Module_Blocky/SM_Floor_1x1_01a.glb" id="7_s6t7s"]
-[ext_resource type="PackedScene" uid="uid://drunl1yjysb31" path="res://assets/Gameplay/SM_Manequin_01a.glb" id="8_w6ylv"]
+[ext_resource type="PackedScene" uid="uid://drunl1yjysb31" path="res://assets/Characters/SM_Manequin_01a.glb" id="8_w6ylv"]
 [ext_resource type="PackedScene" uid="uid://xs62ycskf270" path="res://assets/Gameplay/SM_Door_01a.glb" id="9_ncn3q"]
 [ext_resource type="PackedScene" uid="uid://ia0ho8homme7" path="res://assets/Module_Blocky/SM_WallWindow_1x2_01b.glb" id="10_w06qk"]
 

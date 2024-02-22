@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://drunl1yjysb31"
-path="res://.godot/imported/SM_Manequin_01a.glb-f0c16f5ebbf57155529853ab8450fa6a.scn"
+uid="uid://ovc4eb2by7gw"
+path="res://.godot/imported/Monster_01_low.glb-8fd8f5828e9ffec79542fe6ea4528563.scn"
 
 [deps]
 
-source_file="res://assets/Gameplay/SM_Manequin_01a.glb"
-dest_files=["res://.godot/imported/SM_Manequin_01a.glb-f0c16f5ebbf57155529853ab8450fa6a.scn"]
+source_file="res://assets/Characters/Monster_01/Monster_01_low.glb"
+dest_files=["res://.godot/imported/Monster_01_low.glb-8fd8f5828e9ffec79542fe6ea4528563.scn"]
 
 [params]
 
