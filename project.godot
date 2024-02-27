@@ -78,4 +78,5 @@ q={
 
 [rendering]
 
+scaling_3d/scale=0.45
 mesh_lod/lod_change/threshold_pixels=0.0
