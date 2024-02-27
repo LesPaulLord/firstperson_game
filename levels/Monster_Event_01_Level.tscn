@@ -1,34 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://baxequbo4ylpi"]
+[gd_scene load_steps=6 format=3 uid="uid://baxequbo4ylpi"]
 
 [ext_resource type="PackedScene" uid="uid://csmaijf2igvay" path="res://assets/Module_Blocky/SM_Floor_2x2_01a.glb" id="1_mc40l"]
 [ext_resource type="PackedScene" uid="uid://ymeo4ll7yg53" path="res://assets/Module_Blocky/SM_Wall_1x2_01a.glb" id="2_3rkqu"]
 [ext_resource type="PackedScene" uid="uid://boelkv6g1q7cw" path="res://assets/Props/SM_Couch_01a.glb" id="3_cv3pf"]
+[ext_resource type="PackedScene" uid="uid://bq7vnlpo1neqy" path="res://assets/Module_Blocky/SM_DirtHole_01a.glb" id="4_5letv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5i18i"]
 
 [node name="Monster_Event_01_Level" type="Node3D"]
 
 [node name="SM_Floor_2x2_01a2" parent="." instance=ExtResource("1_mc40l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+visible = false
 
 [node name="SM_Floor_2x2_01a4" parent="." instance=ExtResource("1_mc40l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 1)
+visible = false
 
 [node name="SM_Floor_2x2_01a3" parent="." instance=ExtResource("1_mc40l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+visible = false
 
 [node name="SM_Floor_2x2_01a5" parent="." instance=ExtResource("1_mc40l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+visible = false
 
 [node name="SM_Wall_1x2_01a2" parent="." instance=ExtResource("2_3rkqu")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, -1)
+visible = false
 
 [node name="SM_Wall_1x2_01a5" parent="." instance=ExtResource("2_3rkqu")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0, -1)
+visible = false
 
 [node name="SM_Wall_1x2_01a3" parent="." instance=ExtResource("2_3rkqu")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.45058e-08, 0, -1)
+visible = false
 
 [node name="SM_Wall_1x2_01a4" parent="." instance=ExtResource("2_3rkqu")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -1)
+visible = false
 
 [node name="SM_Couch_01a2" parent="." instance=ExtResource("3_cv3pf")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -1, 0, -0.4)
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -0.8, 0, -3)
+
+[node name="SM_DirtHole_01a2" parent="." instance=ExtResource("4_5letv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0, 1.2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 8.7, 0, 0, 0, 44.46, -4.4, 3.4, -13.2)
+mesh = SubResource("BoxMesh_5i18i")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 8.7, 0, 0, 0, 44.46, 4.4, 3.4, -13.2)
+mesh = SubResource("BoxMesh_5i18i")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.31134e-08, -8.7, 0, 0.3, -3.80289e-07, 0, 0, 0, 44.46, -1.19209e-07, 7.4, -13.2)
+mesh = SubResource("BoxMesh_5i18i")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 1, -2)
+omni_range = 1.296
+omni_attenuation = 2.19094
