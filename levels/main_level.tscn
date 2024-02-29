@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cvlgf3lprgn4"]
+[gd_scene load_steps=25 format=3 uid="uid://cvlgf3lprgn4"]
 
 [ext_resource type="Script" path="res://scripts/Gameplay_Sequence.gd" id="1_1hff5"]
 [ext_resource type="Script" path="res://levels/main_level.gd" id="1_23o41"]
@@ -14,7 +14,9 @@
 [ext_resource type="AudioStream" uid="uid://capugqpiu55wg" path="res://sound/SFX_Wind_001.mp3" id="7_fu17m"]
 [ext_resource type="AudioStream" uid="uid://coujusol2xs3g" path="res://sound/Monster_Theme_001_Keys.mp3" id="7_ghnrq"]
 [ext_resource type="AudioStream" uid="uid://cnlp3kmfrqyot" path="res://sound/SFX_Wind_002.mp3" id="8_ffvfg"]
+[ext_resource type="Script" path="res://scripts/Music_Manager.gd" id="9_2jffk"]
 [ext_resource type="PackedScene" uid="uid://baxequbo4ylpi" path="res://levels/Monster_Event_01_Level.tscn" id="13_qp2jx"]
+[ext_resource type="AudioStream" uid="uid://bpwefgevdk8av" path="res://sound/SFX_Inspiration_Guide.mp3" id="15_sbxkr"]
 [ext_resource type="PackedScene" uid="uid://bae5aa4ph2jy" path="res://assets/Characters/Monster_01/monster_01_low.tscn" id="16_siior"]
 [ext_resource type="Shader" path="res://shader/FilmGrain.gdshader" id="17_io87q"]
 
@@ -127,6 +129,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.61,
 fov = 43.0
 
 [node name="Sound" type="Node" parent="."]
+script = ExtResource("9_2jffk")
 
 [node name="MonsterMusic_FadeIn" type="AnimationPlayer" parent="Sound"]
 root_node = NodePath("../../Gameplay/MonsterEvent03")
@@ -143,6 +146,7 @@ attenuation_filter_cutoff_hz = 500.0
 [node name="MonsterMusic02" type="AudioStreamPlayer3D" parent="Sound"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9492, 1.7139, -9.29172)
 stream = ExtResource("6_4778u")
+volume_db = -80.0
 max_distance = 20.0
 area_mask = 2
 attenuation_filter_cutoff_hz = 500.0
@@ -174,6 +178,15 @@ emission_angle_degrees = 64.6
 [node name="BGNoise_001" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource("7_6hcjw")
 autoplay = true
+
+[node name="SFX_Inspiration_Guide_01" type="AudioStreamPlayer3D" parent="Sound"]
+transform = Transform3D(-0.709005, 0, 0.705204, 0, 1, 0, -0.705204, 0, -0.709005, -2.32, 1.1326, -7.08338)
+stream = ExtResource("15_sbxkr")
+max_distance = 5.9
+emission_angle_enabled = true
+emission_angle_degrees = 63.0
+emission_angle_filter_attenuation_db = -10.0
+attenuation_filter_db = -9.9
 
 [node name="Player" parent="." instance=ExtResource("2_t5ga8")]
 transform = Transform3D(-1, -0.000539412, 0.000468959, -0.000539427, 1, -3.29221e-05, -0.000468943, -3.31576e-05, -1, 1.55341, 1.04221, 0.0164202)

@@ -13,6 +13,7 @@ var current_collider
 @onready var door_is_open = false
 @onready var player = get_node("/root/MainLevel/Player")
 @onready var door = get_tree().current_scene.get_node("Gameplay/Door_interactable")
+@onready var music = get_tree().current_scene.get_node("Sound")
 
 signal start_MonsterEvent_01
 signal end_MonsterEvent_01
@@ -94,8 +95,11 @@ func _process(_delta):
 			collider.interact()
 			interaction_label.text = ("")
 			
+			music.play_inspiration_Music_01()
+			
 			player.unlock_controller()
 			is_interacting = false
+			
 			
 	elif is_colliding() and collider is Interactable_Door_Open:
 		
