@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="FirstPersonGame"
+config/name="Apartment_Game"
 run/main_scene="res://levels/main_level.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 run/max_fps=30

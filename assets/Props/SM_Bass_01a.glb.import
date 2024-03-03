@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bsyihak6nxdg6"
-path="res://.godot/imported/SM_Guitard_01a.glb-954f9375d4fae8e4a51ceed9e4302ba6.scn"
+path="res://.godot/imported/SM_Bass_01a.glb-4175824720f17c6ac633668094243525.scn"
 
 [deps]
 
-source_file="res://assets/Props/SM_Guitard_01a.glb"
-dest_files=["res://.godot/imported/SM_Guitard_01a.glb-954f9375d4fae8e4a51ceed9e4302ba6.scn"]
+source_file="res://assets/Props/SM_Bass_01a.glb"
+dest_files=["res://.godot/imported/SM_Bass_01a.glb-4175824720f17c6ac633668094243525.scn"]
 
 [params]
 
