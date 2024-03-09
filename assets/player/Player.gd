@@ -55,10 +55,10 @@ func _physics_process(delta):
 		
 	# Debug cheat for going fast !!
 	if SPEED == 3.0 and Input.is_action_just_pressed("Sprint"):
-			SPEED = 12.0
-			
+		SPEED = 12.0
+		
 	elif SPEED == 12.0 and Input.is_action_just_pressed("Sprint"):
-			SPEED = 3.0
+		SPEED = 3.0
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with a custom keymap depending on your control scheme. These strings default to the arrow keys layout.
@@ -73,6 +73,15 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	
+	#Footsteps sounds added
+	if $Sound/Timer.time_left <= 0 and velocity.x != 0 :
+		$Sound/FootstepsPlayer_Wood_01.play()
+		$Sound/Timer.start(0.5)
+		
+	elif $Sound/Timer.time_left <= 0 and velocity.y != 0:
+		$Sound/FootstepsPlayer_Wood_01.play()
+		$Sound/Timer.start(0.5)
 	
 
 func lock_controller():
