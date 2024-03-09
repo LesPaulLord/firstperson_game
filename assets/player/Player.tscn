@@ -36,28 +36,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 current = true
 
 [node name="interaction_raycast" type="RayCast3D" parent="rotation_helper/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.656498, 0, 0, 0)
 target_position = Vector3(0, 0, -2)
 collision_mask = 2
 script = ExtResource("2_hgm5o")
-
-[node name="UI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Reticle" type="Label" parent="UI"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "."
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Sound" type="Node" parent="."]
 

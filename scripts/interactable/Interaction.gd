@@ -4,15 +4,21 @@ extends RayCast3D
 
 var current_collider
 
-@onready var interaction_label = get_node("/root/MainLevel/UI/Label")
+@onready var interaction_eye = get_node("/root/MainLevel/UI/Eye_Reticle")
+@onready var interaction_text = get_node("/root/MainLevel/UI/InteractionText")
+
 @onready var is_interacting = false
 @onready var monsterevent_is_current = false
 @onready var monsterevent_01_ready = false
 @onready var monsterevent_01_done = false
 @onready var door_front_interacted = false
 @onready var door_is_open = false
+
 @onready var player = get_node("/root/MainLevel/Player")
+@onready var playerUI = get_node("/root/MainLevel/UI")
+
 @onready var door = get_tree().current_scene.get_node("Gameplay/Door_interactable")
+
 @onready var music = get_tree().current_scene.get_node("Sound")
 
 signal start_MonsterEvent_01
@@ -32,16 +38,19 @@ func _process(_delta):
 			
 		# Set the interaction text and lock player controller
 		if Input.is_action_just_pressed("Interact") and is_interacting == false:
+			interaction_text.show()
+			interaction_eye.set_visible(false)
 			set_interaction_text(collider.get_interaction_text())
 			collider.interact()
-			interaction_label.text = collider.get_prompt()
+			interaction_text.text = collider.get_prompt()
 			
 			player.lock_controller()
 			is_interacting = true
 			
 		# Remove interaction text and unlock player controller
 		elif Input.is_action_just_pressed("Interact") and is_interacting == true:
-			interaction_label.text = ("")
+			interaction_text.hide()
+			interaction_text.text = ("")
 			
 			player.unlock_controller()
 			is_interacting = false
@@ -53,8 +62,9 @@ func _process(_delta):
 			
 		# Set the interaction text and lock player controller
 		if Input.is_action_just_pressed("Interact") and monsterevent_01_ready == true and is_interacting == false and monsterevent_is_current == false and monsterevent_01_done == false:
+			interaction_eye.set_visible(false)
 			collider.interact()
-			interaction_label.text = ("")
+			interaction_text.text = ("")
 			
 			player.lock_controller()
 			is_interacting = true
@@ -63,6 +73,7 @@ func _process(_delta):
 			
 		elif Input.is_action_just_pressed("Interact") and is_interacting == true and monsterevent_is_current == true:
 			emit_signal("end_MonsterEvent_01")
+			interaction_text.hide()
 			monsterevent_is_current = false
 			is_interacting = false
 			monsterevent_01_done = true
@@ -75,8 +86,10 @@ func _process(_delta):
 			
 		# Set the interaction text and lock player controller
 		if Input.is_action_just_pressed("Interact") and door_front_interacted == false and is_interacting == false:
+			interaction_text.show()
+			interaction_eye.set_visible(false)
 			collider.interact()
-			interaction_label.text = collider.get_prompt()
+			interaction_text.text = collider.get_prompt()
 			
 			player.lock_controller()
 			is_interacting = true
@@ -85,41 +98,48 @@ func _process(_delta):
 			monsterevent_01_ready = true
 			
 		elif Input.is_action_just_pressed("Interact") and door_front_interacted == true and is_interacting == false:
+			interaction_text.show()
+			interaction_eye.set_visible(false)
 			collider.interact()
-			interaction_label.text = collider.get_prompt()
+			interaction_text.text = collider.get_prompt()
 			
 			player.lock_controller()
 			is_interacting = true
 			
 		elif Input.is_action_just_pressed("Interact") and is_interacting == true:
+			interaction_text.hide()
 			collider.interact()
-			interaction_label.text = ("")
+			interaction_text.text = ("")
 			
 			music.play_inspiration_Music_01()
 			
 			player.unlock_controller()
 			is_interacting = false
 			
-			
 	elif is_colliding() and collider is Interactable_Door_Open:
 		
 		if current_collider != collider and door_is_open == false:
+			interaction_text.show()
+			interaction_eye.set_visible(false)
 			set_interaction_text(collider.get_interaction_text())
 			current_collider = collider
 			
 		elif current_collider != collider and door_is_open == true:
-			interaction_label.text = ("")
+			interaction_text.hide()
+			interaction_text.text = ("")
 			
 		# Set the interaction text and lock player controller
 		if Input.is_action_just_pressed("Interact") and door_is_open == false:
+			interaction_text.hide()
 			collider.interact()
 			door.animation()
 			door_is_open = true
-			interaction_label.text = ("")
+			interaction_text.text = ("")
 			
 		# Remove interaction text and unlock player controller
 		elif Input.is_action_just_pressed("Interact") and door_is_open == true:
-			interaction_label.text = ("")
+			interaction_text.hide()
+			interaction_text.text = ("")
 			
 	elif current_collider:
 		current_collider=null
@@ -129,11 +149,10 @@ func _process(_delta):
 func set_interaction_text(text):
 	
 	if !text:
-		interaction_label.set_text("")
-		interaction_label.set_visible(false)
+		interaction_eye.set_visible(false)
+		
 	else:
-		interaction_label.set_text("Press E to interact")
-		interaction_label.set_visible(true)
+		interaction_eye.set_visible(true)
 		
 func monster_event_is_true():
 	monsterevent_is_current = true
