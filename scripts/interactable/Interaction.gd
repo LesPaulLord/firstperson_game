@@ -63,6 +63,7 @@ func _process(_delta):
 		# Set the interaction text and lock player controller
 		if Input.is_action_just_pressed("Interact") and monsterevent_01_ready == true and is_interacting == false and monsterevent_is_current == false and monsterevent_01_done == false:
 			interaction_eye.set_visible(false)
+			interaction_text.hide()
 			collider.interact()
 			interaction_text.text = ("")
 			
@@ -73,7 +74,6 @@ func _process(_delta):
 			
 		elif Input.is_action_just_pressed("Interact") and is_interacting == true and monsterevent_is_current == true:
 			emit_signal("end_MonsterEvent_01")
-			interaction_text.hide()
 			monsterevent_is_current = false
 			is_interacting = false
 			monsterevent_01_done = true
