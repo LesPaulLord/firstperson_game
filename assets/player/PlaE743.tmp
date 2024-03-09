@@ -1,24 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgpjxoygnvyy4"]
+[gd_scene load_steps=5 format=3 uid="uid://dgpjxoygnvyy4"]
 
 [ext_resource type="Script" path="res://assets/player/Player.gd" id="1_1fhis"]
 [ext_resource type="Script" path="res://scripts/interactable/Interaction.gd" id="2_hgm5o"]
 [ext_resource type="AudioStream" uid="uid://borm51hb6o004" path="res://sound/Footsteps_Wood_01.mp3" id="3_1w35m"]
-[ext_resource type="AudioStream" uid="uid://dqw2mmdig4kqa" path="res://sound/Footsteps_Wood_02.mp3" id="4_pfwiv"]
-[ext_resource type="AudioStream" uid="uid://bg45vx3mu81v0" path="res://sound/Footsteps_Wood_03.mp3" id="5_sbrdi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tdn1f"]
 radius = 0.2
 height = 1.6
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mux78"]
-random_pitch = 1.2
-streams_count = 3
-stream_0/stream = ExtResource("3_1w35m")
-stream_0/weight = 1.0
-stream_1/stream = ExtResource("4_pfwiv")
-stream_1/weight = 1.0
-stream_2/stream = ExtResource("5_sbrdi")
-stream_2/weight = 1.0
 
 [node name="Player" type="CharacterBody3D"]
 disable_mode = 2
@@ -61,9 +49,8 @@ vertical_alignment = 1
 
 [node name="Sound" type="Node" parent="."]
 
-[node name="FootstepsPlayer_Wood_01" type="AudioStreamPlayer" parent="Sound"]
-stream = SubResource("AudioStreamRandomizer_mux78")
-volume_db = -10.0
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("3_1w35m")
 
 [node name="Timer" type="Timer" parent="Sound"]
 one_shot = true
