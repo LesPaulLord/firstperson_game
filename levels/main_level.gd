@@ -2,11 +2,14 @@ extends Node3D
 
 func _ready():
 	
+	var dot_UI = $UI/Dot_Reticle
+	
 	# Monster_Event 01 sequence signal activations
 	
 	$Player/rotation_helper/Camera3D/interaction_raycast.start_MonsterEvent_01.connect($BlackScreen.animationBlack)
 	
 	$BlackScreen.fade_to_black_done.connect(self.camera_switch_01)
+	$BlackScreen.fade_to_black_done.connect(dot_UI.hide)
 	$BlackScreen.fade_to_black_done.connect($BlackScreen.animationVisible)
 	
 	$BlackScreen.fade_to_visible_done.connect($Player/rotation_helper/Camera3D/interaction_raycast.monster_event_is_true)
@@ -14,6 +17,7 @@ func _ready():
 	$Player/rotation_helper/Camera3D/interaction_raycast.end_MonsterEvent_01.connect($BlackScreen.animationBlack)
 	
 	$BlackScreen.fade_to_black_done_02.connect(self.camera_switch_02)
+	$BlackScreen.fade_to_black_done_02.connect(dot_UI.show)
 	$BlackScreen.fade_to_black_done_02.connect($BlackScreen.animationVisible)
 	
 	$BlackScreen.fade_to_visible_done_02.connect($Player/rotation_helper/Camera3D/interaction_raycast.monster_event_is_false)
