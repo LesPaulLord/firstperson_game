@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://i6dlskyiuyww"
-path="res://.godot/imported/SM_Counter_02.glb-12b78d1c0cd2c88d98fb21a847cd20e4.scn"
+uid="uid://c6vq0sidjnh0b"
+path="res://.godot/imported/SM_KitchenCounter_01b.glb-858d438d1cb7cd471baa7d66c359caf1.scn"
 
 [deps]
 
-source_file="res://assets/Module_Blocky/SM_Counter_02.glb"
-dest_files=["res://.godot/imported/SM_Counter_02.glb-12b78d1c0cd2c88d98fb21a847cd20e4.scn"]
+source_file="res://assets/Module_Blocky/SM_KitchenCounter_01b.glb"
+dest_files=["res://.godot/imported/SM_KitchenCounter_01b.glb-858d438d1cb7cd471baa7d66c359caf1.scn"]
 
 [params]
 
