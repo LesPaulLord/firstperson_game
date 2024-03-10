@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cvlgf3lprgn4"]
+[gd_scene load_steps=28 format=3 uid="uid://cvlgf3lprgn4"]
 
 [ext_resource type="Script" path="res://scripts/Gameplay_Sequence.gd" id="1_1hff5"]
 [ext_resource type="Script" path="res://levels/main_level.gd" id="1_23o41"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cxjmpt05aogui" path="res://UI/Eye_Icon.png" id="2_n2jjg"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/player/Player.tscn" id="2_t5ga8"]
 [ext_resource type="PackedScene" uid="uid://qtn73s2ukxit" path="res://UI/Black_Screen.tscn" id="2_w60e7"]
+[ext_resource type="Texture2D" uid="uid://b0v52krhgd2wq" path="res://UI/Dot_Icon.png" id="3_4ncps"]
 [ext_resource type="PackedScene" uid="uid://b2qlvbgivd77s" path="res://assets/Gameplay/MonsterEvent01_Vent.tscn" id="4_ol5vi"]
 [ext_resource type="PackedScene" uid="uid://baalhn4pvrxlm" path="res://assets/Gameplay/Door_interactable.tscn" id="5_75yn0"]
 [ext_resource type="AudioStream" uid="uid://jv43jugfj0ts" path="res://sound/Monster_Theme_001_Bass.mp3" id="5_6423e"]
@@ -126,25 +127,23 @@ color = Color(0, 0, 0, 0.337255)
 
 [node name="Eye_Reticle" type="TextureRect" parent="UI"]
 visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_n2jjg")
-
-[node name="Dot_Reticle" type="Label" parent="UI"]
+z_index = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -8.0
-offset_right = 1.0
-offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "."
-horizontal_alignment = 1
-vertical_alignment = 1
+texture = ExtResource("2_n2jjg")
+
+[node name="Dot_Reticle" type="TextureRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_4ncps")
 
 [node name="BlackScreen" parent="." instance=ExtResource("2_w60e7")]
 

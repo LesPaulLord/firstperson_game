@@ -29,7 +29,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 0, 1.93715e-07)
 
 [node name="SM_Manequin_01a2" parent="." instance=ExtResource("5_1245h")]
-transform = Transform3D(-4.37114e-08, -1.06581e-14, -1, 0, 1, -1.06581e-14, 1, 0, -4.37114e-08, 0.70587, 0.6, -4.13122)
+transform = Transform3D(1.91069e-15, -1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1, 0, -4.37114e-08, 3.50587, -0.4, -4.23122)
 
 [node name="SM_WallCorner_Out_1x2_01a2" parent="." instance=ExtResource("6_a4mih")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, 0.2)
