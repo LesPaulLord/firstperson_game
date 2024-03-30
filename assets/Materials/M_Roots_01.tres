@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dt500nvclqdh4"]
+
+[ext_resource type="Texture2D" uid="uid://bf43tt0m7ole5" path="res://assets/Characters/Monster_01/Roots_D.png" id="1_wka3q"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.193
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_wka3q")

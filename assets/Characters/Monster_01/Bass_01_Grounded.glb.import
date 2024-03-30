@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ovc4eb2by7gw"
-path="res://.godot/imported/Monster_01_low.glb-8fd8f5828e9ffec79542fe6ea4528563.scn"
+uid="uid://badxejrjwlrjf"
+path="res://.godot/imported/Bass_01_Grounded.glb-d896d74bf0f4e3c53f93508d5b0d89e1.scn"
 
 [deps]
 
-source_file="res://assets/Characters/Monster_01/Monster_01_low.glb"
-dest_files=["res://.godot/imported/Monster_01_low.glb-8fd8f5828e9ffec79542fe6ea4528563.scn"]
+source_file="res://assets/Characters/Monster_01/Bass_01_Grounded.glb"
+dest_files=["res://.godot/imported/Bass_01_Grounded.glb-d896d74bf0f4e3c53f93508d5b0d89e1.scn"]
 
 [params]
 

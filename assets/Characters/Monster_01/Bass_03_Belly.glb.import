@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dogjc7q2gghyf"
-path="res://.godot/imported/Monster_01_animationTEST.glb-cd58c87fea37411d37eba045842b9a17.scn"
+uid="uid://bn7oxps6c5xgu"
+path="res://.godot/imported/Bass_03_Belly.glb-87d5ad93800f3d1d2b9f8d40ae117684.scn"
 
 [deps]
 
-source_file="res://assets/Characters/Monster_01/Monster_01_animationTEST.glb"
-dest_files=["res://.godot/imported/Monster_01_animationTEST.glb-cd58c87fea37411d37eba045842b9a17.scn"]
+source_file="res://assets/Characters/Monster_01/Bass_03_Belly.glb"
+dest_files=["res://.godot/imported/Bass_03_Belly.glb-87d5ad93800f3d1d2b9f8d40ae117684.scn"]
 
 [params]
 

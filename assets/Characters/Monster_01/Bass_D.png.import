@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl2chm8fkxn38"
-path.s3tc="res://.godot/imported/Monster_D.tga-4b80e19ab70f3e8813d50e6dfc8abfed.s3tc.ctex"
+uid="uid://c3lk5edjnidkr"
+path.s3tc="res://.godot/imported/Bass_D.png-b792a77f8daa10d9961c69c1c7620a53.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://assets/Characters/Monster_01/Monster_D.tga"
-dest_files=["res://.godot/imported/Monster_D.tga-4b80e19ab70f3e8813d50e6dfc8abfed.s3tc.ctex"]
+source_file="res://assets/Characters/Monster_01/Bass_D.png"
+dest_files=["res://.godot/imported/Bass_D.png-b792a77f8daa10d9961c69c1c7620a53.s3tc.ctex"]
 
 [params]
 

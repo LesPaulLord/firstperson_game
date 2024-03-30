@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buxpif2mdd77u"
-path.s3tc="res://.godot/imported/Monster_01_animationTEST_Roots_D.png-e8d0e6db776fbf5dd578197cc5411fb4.s3tc.ctex"
+uid="uid://b1wrynxhfuuvy"
+path.s3tc="res://.godot/imported/Monster_D.png-e0fbd87d6bf2b12355d0f01332204935.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/Characters/Monster_01/Monster_01_animationTEST_Roots_D.png"
-dest_files=["res://.godot/imported/Monster_01_animationTEST_Roots_D.png-e8d0e6db776fbf5dd578197cc5411fb4.s3tc.ctex"]
+source_file="res://assets/Characters/Monster_01/Monster_D.png"
+dest_files=["res://.godot/imported/Monster_D.png-e0fbd87d6bf2b12355d0f01332204935.s3tc.ctex"]
 
 [params]
 

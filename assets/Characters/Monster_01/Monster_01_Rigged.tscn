@@ -1,0 +1,153 @@
+[gd_scene load_steps=13 format=3 uid="uid://bhk0asx0o2kkq"]
+
+[ext_resource type="PackedScene" uid="uid://dyw3kjs504bmd" path="res://assets/Characters/Monster_01/Monster_01_Rigged.glb" id="1_s7m3r"]
+[ext_resource type="Material" uid="uid://bv8j3srsr7rbb" path="res://assets/Materials/M_Monster_01.tres" id="2_4gxuo"]
+[ext_resource type="Material" uid="uid://dt500nvclqdh4" path="res://assets/Materials/M_Roots_01.tres" id="3_nswu2"]
+[ext_resource type="PackedScene" uid="uid://1wrmo4adiysj" path="res://assets/Characters/Monster_01/Bass_02_Hand.tscn" id="4_ptjmf"]
+[ext_resource type="PackedScene" uid="uid://fjdeve5720la" path="res://assets/Characters/Monster_01/Bass_03_Belly.tscn" id="5_t7dlw"]
+[ext_resource type="Animation" uid="uid://cgb5jncqrgvmv" path="res://animation/Fetch_Bass_InEngine.res" id="6_yoxwj"]
+[ext_resource type="Animation" uid="uid://cti7muwjoqnhv" path="res://animation/Monster_01_Idle.res" id="7_hwqss"]
+[ext_resource type="Animation" uid="uid://ojek5bvgx65" path="res://animation/Monster_01_Idle_Glitch.res" id="8_vq5qu"]
+[ext_resource type="Animation" uid="uid://cv6ag5h57cq7b" path="res://animation/Monster_01_Playing_Bas.res" id="9_lrqv8"]
+[ext_resource type="PackedScene" uid="uid://1uc648otahlp" path="res://assets/Characters/Monster_01/Bass_01_Grounded.tscn" id="10_d08r6"]
+
+[sub_resource type="Animation" id="Animation_o3eqq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bass_01_Grounded:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i3x7k"]
+_data = {
+"Fetch_Bass_BAKED": ExtResource("6_yoxwj"),
+"Idle_BAKED": ExtResource("7_hwqss"),
+"Idle_Glitch_BAKED": ExtResource("8_vq5qu"),
+"Playing_Bass_BAKED": ExtResource("9_lrqv8"),
+"RESET": SubResource("Animation_o3eqq")
+}
+
+[node name="Monster_01_Rigged" instance=ExtResource("1_s7m3r")]
+
+[node name="Skeleton3D" parent="gameready_rig" index="0"]
+bones/0/position = Vector3(-0.0139836, 0.825724, -0.0588166)
+bones/0/rotation = Quaternion(0.0710735, 0.0661699, 0.0123504, 0.995197)
+bones/1/rotation = Quaternion(-0.0173899, -0.00148802, -0.0230306, 0.999582)
+bones/2/position = Vector3(-4.62952e-09, 0.12901, 2.11857e-08)
+bones/2/rotation = Quaternion(-0.0380516, -0.0242649, -0.055983, 0.997411)
+bones/3/position = Vector3(-3.68189e-09, 0.176543, 2.31487e-08)
+bones/3/rotation = Quaternion(0.393063, 0.0745656, 0.0820548, 0.912803)
+bones/4/position = Vector3(7.4174e-09, 0.140487, 7.16635e-08)
+bones/4/rotation = Quaternion(-0.143024, 0.214044, -0.0443975, 0.965276)
+bones/5/position = Vector3(-4.90672e-08, 0.0572205, -2.34616e-08)
+bones/5/rotation = Quaternion(0.216658, 0.00182618, 0.00302896, 0.976241)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/position = Vector3(-2.00839e-08, 0.0536118, 1.07026e-07)
+bones/6/rotation = Quaternion(-0.254889, -0.200302, -0.00660346, 0.945974)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/position = Vector3(-0.0139834, 0.825724, -0.0588166)
+bones/7/rotation = Quaternion(0.191796, 0.694874, 0.438495, -0.536736)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/position = Vector3(-0.0139838, 0.825724, -0.0588166)
+bones/8/rotation = Quaternion(-0.156694, 0.751807, 0.477688, 0.426671)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/position = Vector3(0.113863, 0.806859, 0.0187373)
+bones/9/rotation = Quaternion(0.978943, 0.126806, -0.058691, 0.148816)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/position = Vector3(-1.88687e-08, 0.187104, -5.82759e-08)
+bones/10/rotation = Quaternion(-7.81984e-08, -0.0577592, -3.62947e-07, 0.998331)
+bones/11/position = Vector3(-3.12146e-08, 0.187104, -5.35533e-09)
+bones/11/rotation = Quaternion(0.315409, -0.0689636, 0.111506, 0.939855)
+bones/12/position = Vector3(-1.10878e-08, 0.198372, -1.85617e-10)
+bones/12/rotation = Quaternion(-6.00948e-08, -0.0542732, -2.02718e-08, 0.998526)
+bones/13/position = Vector3(-9.23774e-09, 0.198372, -2.42223e-08)
+bones/13/rotation = Quaternion(-0.574377, -0.0811726, -0.0282164, 0.814067)
+bones/14/position = Vector3(1.62349e-08, 0.0748284, 1.54274e-08)
+bones/14/rotation = Quaternion(0.00012734, 0.975894, -0.218243, 0.000454758)
+bones/15/position = Vector3(-0.115432, 0.798482, 0.0486953)
+bones/15/rotation = Quaternion(0.985627, -0.119639, -0.061452, 0.102228)
+bones/15/scale = Vector3(1, 1, 1)
+bones/16/position = Vector3(3.35194e-08, 0.174686, -6.03836e-09)
+bones/16/rotation = Quaternion(-1.74856e-09, 0.189376, -4.08355e-08, 0.981905)
+bones/17/position = Vector3(-1.75447e-08, 0.174686, -8.22472e-08)
+bones/17/rotation = Quaternion(0.292482, 0.189431, -0.059228, 0.935448)
+bones/18/position = Vector3(2.66348e-08, 0.2027, -8.17858e-09)
+bones/18/rotation = Quaternion(-1.49603e-08, -0.11328, -2.9287e-09, 0.993563)
+bones/19/position = Vector3(-5.82804e-09, 0.202699, -1.19053e-08)
+bones/19/rotation = Quaternion(-0.574007, -0.0850089, -0.0165525, 0.814258)
+bones/19/scale = Vector3(1, 1, 1)
+bones/20/position = Vector3(-1.7734e-08, 0.0748234, -9.99729e-09)
+bones/20/rotation = Quaternion(-0.000131096, 0.975919, -0.218131, -0.000453862)
+bones/20/scale = Vector3(1, 1, 1)
+bones/21/position = Vector3(0.045735, 1.24735, 0.139456)
+bones/21/rotation = Quaternion(-0.452082, -0.327733, -0.371348, 0.741832)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/position = Vector3(0.239882, 1.30526, 0.0439674)
+bones/22/rotation = Quaternion(-0.18603, 0.176211, 0.928791, -0.26775)
+bones/22/scale = Vector3(1, 1, 1)
+bones/23/position = Vector3(-1.96632e-08, 0.123115, -5.78926e-08)
+bones/23/rotation = Quaternion(-3.6202e-09, -0.249682, -2.46532e-08, 0.968328)
+bones/24/position = Vector3(8.9124e-08, 0.123115, -3.91186e-08)
+bones/24/rotation = Quaternion(2.93727e-08, -0.24968, 3.52489e-07, 0.968328)
+bones/24/scale = Vector3(1, 1, 1)
+bones/25/position = Vector3(1.06034e-07, 0.158481, -4.62244e-08)
+bones/25/rotation = Quaternion(-1.98191e-07, -0.139156, -6.36566e-08, 0.99027)
+bones/26/position = Vector3(1.36177e-08, 0.15848, 4.57723e-08)
+bones/26/rotation = Quaternion(0.203277, -0.140596, -0.914976, 0.318952)
+bones/26/scale = Vector3(1, 1, 1)
+bones/27/position = Vector3(0.00506358, 1.35318, 0.120519)
+bones/27/rotation = Quaternion(-0.49984, 0.247299, 0.560386, 0.612348)
+bones/27/scale = Vector3(1, 1, 1)
+bones/28/position = Vector3(-0.202363, 1.31116, 0.0459528)
+bones/28/rotation = Quaternion(0.132645, -0.0413799, 0.985869, 0.0935728)
+bones/28/scale = Vector3(1, 1, 1)
+bones/29/position = Vector3(9.77321e-09, 0.10363, 5.18466e-09)
+bones/29/rotation = Quaternion(-2.0787e-08, -0.0281279, -1.58136e-07, 0.999604)
+bones/30/position = Vector3(5.09153e-08, 0.10363, 4.04879e-08)
+bones/30/rotation = Quaternion(0.537212, -0.0290393, 0.0185096, 0.842744)
+bones/30/scale = Vector3(1, 1, 1)
+bones/31/position = Vector3(5.29622e-08, 0.139516, -1.4851e-08)
+bones/31/rotation = Quaternion(-4.85095e-08, -0.0935924, 5.79648e-08, 0.995611)
+bones/32/position = Vector3(-6.78759e-09, 0.139516, -7.68205e-08)
+bones/32/rotation = Quaternion(-0.162971, -0.0914372, 0.183616, 0.965073)
+bones/32/scale = Vector3(1, 1, 1)
+bones/33/position = Vector3(0.118349, 1.25925, 0.0229201)
+bones/33/rotation = Quaternion(-0.0457321, 0.545992, 0.82854, -0.115421)
+bones/34/position = Vector3(-0.0798196, 1.21023, 0.0328462)
+bones/34/rotation = Quaternion(-0.0457319, 0.545992, 0.82854, -0.115421)
+
+[node name="Monster_01" parent="gameready_rig/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_4gxuo")
+surface_material_override/1 = ExtResource("3_nswu2")
+
+[node name="BoneAttachment_BassHand" type="BoneAttachment3D" parent="gameready_rig/Skeleton3D" index="1"]
+transform = Transform3D(0.00253603, -0.419541, 0.907733, 0.294389, 0.867823, 0.400273, -0.955682, 0.266211, 0.125709, 0.483072, 0.857798, 0.284419)
+bone_name = "DEF-hand.L"
+bone_idx = 26
+
+[node name="Bass_02_Hand" parent="gameready_rig/Skeleton3D/BoneAttachment_BassHand" index="0" instance=ExtResource("4_ptjmf")]
+transform = Transform3D(0.971327, 0.0981751, -0.216526, -0.147744, 0.962804, -0.226228, 0.186263, 0.251733, 0.949704, -0.00355008, -0.00648072, -0.00235319)
+visible = false
+
+[node name="BoneAttachment_BassBelly" type="BoneAttachment3D" parent="gameready_rig/Skeleton3D" index="2"]
+transform = Transform3D(-0.350258, 0.737261, -0.577724, -0.204164, 0.541872, 0.815287, 0.914132, 0.403511, -0.0392728, -0.0139834, 0.825724, -0.0588166)
+bone_name = "DEF-pelvis.L"
+bone_idx = 7
+
+[node name="Bass_03_Belly" parent="gameready_rig/Skeleton3D/BoneAttachment_BassBelly" index="0" instance=ExtResource("5_t7dlw")]
+transform = Transform3D(0.393014, 0.849564, 0.351823, -0.291863, 0.478078, -0.828407, -0.871983, 0.222892, 0.435847, 0.0123143, -0.0105247, -0.0120264)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_i3x7k")
+}
+
+[node name="Bass_01_Grounded" parent="." index="2" instance=ExtResource("10_d08r6")]
