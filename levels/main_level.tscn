@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cvlgf3lprgn4"]
+[gd_scene load_steps=27 format=3 uid="uid://cvlgf3lprgn4"]
 
 [ext_resource type="Script" path="res://scripts/Gameplay_Sequence.gd" id="1_1hff5"]
 [ext_resource type="Script" path="res://levels/main_level.gd" id="1_23o41"]
@@ -19,7 +19,6 @@
 [ext_resource type="Script" path="res://scripts/Music_Manager.gd" id="9_2jffk"]
 [ext_resource type="PackedScene" uid="uid://baxequbo4ylpi" path="res://levels/Monster_Event_01_Level.tscn" id="13_qp2jx"]
 [ext_resource type="AudioStream" uid="uid://bpwefgevdk8av" path="res://sound/SFX_Inspiration_Guide.mp3" id="15_sbxkr"]
-[ext_resource type="PackedScene" uid="uid://bae5aa4ph2jy" path="res://assets/Characters/Monster_01/monster_01_low.tscn" id="16_siior"]
 [ext_resource type="Shader" path="res://shader/FilmGrain.gdshader" id="17_io87q"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ey2aa"]
@@ -256,6 +255,3 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Monster_01_low" parent="." instance=ExtResource("16_siior")]
-transform = Transform3D(0.379892, 0, 0.925031, 0, 1, 0, -0.925031, 0, 0.379892, -7.26955, 0.158112, -16.6584)
