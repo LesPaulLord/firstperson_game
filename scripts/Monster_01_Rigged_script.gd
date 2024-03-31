@@ -9,7 +9,13 @@ func _process(_delta):
 	pass
 
 func animationPlay():
-	cutscenePlayer.play("MainSequence")
+	var ap = get_node("AnimationTree")
+	ap.set("active", true)
+	hold_for_animation()
 	
-func _on_animation_player_cutscene_animation_finished(Main_Sequence):
+func hold_for_animation():
+	await get_tree().create_timer(27.0).timeout
+	monster_anim_over()
+	
+func monster_anim_over():
 	emit_signal("end_MonsterEvent_01")

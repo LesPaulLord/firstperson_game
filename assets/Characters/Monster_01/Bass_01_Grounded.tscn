@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://1uc648otahlp"]
+[gd_scene load_steps=5 format=3 uid="uid://1uc648otahlp"]
 
 [ext_resource type="PackedScene" uid="uid://badxejrjwlrjf" path="res://assets/Characters/Monster_01/Bass_01_Grounded.glb" id="1_ocq4x"]
 [ext_resource type="Texture2D" uid="uid://c3lk5edjnidkr" path="res://assets/Characters/Monster_01/Bass_D.png" id="2_nda33"]
+[ext_resource type="Material" uid="uid://dt500nvclqdh4" path="res://assets/Materials/M_Roots_01.tres" id="3_8h5vp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c208l"]
 albedo_texture = ExtResource("2_nda33")
@@ -10,3 +11,4 @@ albedo_texture = ExtResource("2_nda33")
 
 [node name="Bass_01_Grounded" parent="." index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_c208l")
+surface_material_override/1 = ExtResource("3_8h5vp")

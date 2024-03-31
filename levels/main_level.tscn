@@ -176,6 +176,9 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.4, 
 [node name="Door_interactable" parent="Gameplay" instance=ExtResource("5_75yn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3298, 0, -9.0281)
 
+[node name="Monster_01_Rigged" parent="Gameplay" instance=ExtResource("21_5ic41")]
+transform = Transform3D(0.570054, 0, 0.821607, 0, 1, 0, -0.821607, 0, 0.570054, -7.18721, 0.175621, -16.7909)
+
 [node name="Camera" type="Node" parent="."]
 
 [node name="Camera_Monster_Event_01" type="Camera3D" parent="Camera"]
@@ -256,6 +259,3 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Monster_01_Rigged" parent="." instance=ExtResource("21_5ic41")]
-transform = Transform3D(0.570054, 0, 0.821607, 0, 1, 0, -0.821607, 0, 0.570054, -7.18721, 0.175621, -16.7909)
