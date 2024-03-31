@@ -11,6 +11,7 @@ func _ready():
 	$BlackScreen.fade_to_black_done.connect(self.camera_switch_01)
 	$BlackScreen.fade_to_black_done.connect(dot_UI.hide)
 	$BlackScreen.fade_to_black_done.connect($BlackScreen.animationVisible)
+	$BlackScreen.fade_to_black_done.connect($Monster_01_Rigged.animationPlay)
 	
 	$BlackScreen.fade_to_visible_done.connect($Player/rotation_helper/Camera3D/interaction_raycast.monster_event_is_true)
 	
