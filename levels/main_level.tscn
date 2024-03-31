@@ -259,6 +259,3 @@ grow_vertical = 2
 
 [node name="Monster_01_Rigged" parent="." instance=ExtResource("21_5ic41")]
 transform = Transform3D(0.570054, 0, 0.821607, 0, 1, 0, -0.821607, 0, 0.570054, -7.18721, 0.175621, -16.7909)
-
-[node name="Monster_01_Rigged2" parent="." instance=ExtResource("21_5ic41")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5631, 0, 1.71062)

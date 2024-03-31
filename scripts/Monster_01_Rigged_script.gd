@@ -5,10 +5,6 @@ extends Node3D
 
 signal end_MonsterEvent_01
 
-func _ready():
-	var at_mixer = at.get("active")
-	at_mixer = false
-
 func _process(_delta):
 	pass
 
