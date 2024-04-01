@@ -78,11 +78,11 @@ func _process(_delta):
 			return
 			
 			#Possibility of skipping cutscene has been cut for now
-		#elif Input.is_action_just_pressed("Interact") and is_interacting == true and monsterevent_is_current == true:
-			#emit_signal("end_MonsterEvent_01")
-			#monsterevent_is_current = false
-			#is_interacting = false
-			#monsterevent_01_done = true
+		elif Input.is_action_just_pressed("Interact") and is_interacting == true and monsterevent_is_current == true:
+			emit_signal("end_MonsterEvent_01")
+			monsterevent_is_current = false
+			is_interacting = false
+			monsterevent_01_done = true
 			
 	elif is_colliding() and collider is Interactable_Door_Front:
 		

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dccce7s7m53w0"]
+
+[ext_resource type="PackedScene" uid="uid://ymeo4ll7yg53" path="res://assets/Module_Blocky/SM_Wall_1x2_01a.glb" id="1_hn11o"]
+[ext_resource type="Script" path="res://scripts/interactable/Interactable_Item.gd" id="2_ytu6j"]
+
+[node name="SM_Wall_1x2_01a2" instance=ExtResource("1_hn11o")]
+
+[node name="SM_Wall_1x2_01a" parent="SM_Wall_1x2_01a" index="0"]
+collision_layer = 3
+script = ExtResource("2_ytu6j")
+prompt_message = "I can see traces of my front door here..."
