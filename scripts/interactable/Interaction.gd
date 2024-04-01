@@ -100,7 +100,6 @@ func _process(_delta):
 			player.lock_controller()
 			is_interacting = true
 			
-			door_front_interacted = true
 			monsterevent_01_ready = true
 			
 		elif Input.is_action_just_pressed("Interact") and door_front_interacted == true and is_interacting == false:
@@ -112,12 +111,21 @@ func _process(_delta):
 			player.lock_controller()
 			is_interacting = true
 			
-		elif Input.is_action_just_pressed("Interact") and is_interacting == true:
+		elif Input.is_action_just_pressed("Interact") and door_front_interacted == false and is_interacting == true:
 			interaction_text.hide()
 			collider.interact()
 			interaction_text.text = ("")
 			
 			music.play_inspiration_Music_01()
+			
+			door_front_interacted = true
+			player.unlock_controller()
+			is_interacting = false
+			
+		elif Input.is_action_just_pressed("Interact") and door_front_interacted == true and is_interacting == true:
+			interaction_text.hide()
+			collider.interact()
+			interaction_text.text = ("")
 			
 			player.unlock_controller()
 			is_interacting = false

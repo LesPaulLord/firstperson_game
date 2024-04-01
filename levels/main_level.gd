@@ -28,6 +28,7 @@ func _ready():
 	$BlackScreen.fade_to_black_done_02.connect(self.camera_switch_02)
 	$BlackScreen.fade_to_black_done_02.connect(dot_UI.show)
 	$BlackScreen.fade_to_black_done_02.connect($BlackScreen.animationVisible)
+	$BlackScreen.fade_to_black_done_02.connect($Sound/Monster_01_Ambient.play)
 	
 	# Controller unlocked
 	$BlackScreen.fade_to_visible_done_02.connect($Player/rotation_helper/Camera3D/interaction_raycast.monster_event_is_false)
