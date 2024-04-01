@@ -2148,6 +2148,8 @@ switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_aym3i"]
+reset = false
+switch_mode = 1
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ad0ul"]
@@ -2155,7 +2157,7 @@ states/End/position = Vector2(1659.5, 92.6328)
 states/Fetch_Bass_BAKED/node = SubResource("AnimationNodeAnimation_5rddk")
 states/Fetch_Bass_BAKED/position = Vector2(809, 90.7734)
 states/Idle_BAKED/node = SubResource("AnimationNodeAnimation_nvu4s")
-states/Idle_BAKED/position = Vector2(257.5, 91.7031)
+states/Idle_BAKED/position = Vector2(257, 92.0195)
 "states/Idle_BAKED 2/node" = SubResource("AnimationNodeAnimation_j4qhc")
 "states/Idle_BAKED 2/position" = Vector2(619.5, 90.7344)
 states/Idle_Glitch_BAKED/node = SubResource("AnimationNodeAnimation_pipdr")
@@ -2166,9 +2168,9 @@ states/Playing_Bass_BAKED/position = Vector2(1016, 87.4961)
 "states/Playing_Bass_BAKED 2/position" = Vector2(1243.27, 86.1836)
 "states/Playing_Bass_BAKED 3/node" = SubResource("AnimationNodeAnimation_w453x")
 "states/Playing_Bass_BAKED 3/position" = Vector2(1482.27, 92.711)
-states/Start/position = Vector2(117.5, 92.5771)
+states/Start/position = Vector2(117, 92.6049)
 transitions = ["Idle_BAKED", "Idle_Glitch_BAKED", SubResource("AnimationNodeStateMachineTransition_m8a2p"), "Idle_Glitch_BAKED", "Idle_BAKED 2", SubResource("AnimationNodeStateMachineTransition_anfw5"), "Idle_BAKED 2", "Fetch_Bass_BAKED", SubResource("AnimationNodeStateMachineTransition_dw6xj"), "Fetch_Bass_BAKED", "Playing_Bass_BAKED", SubResource("AnimationNodeStateMachineTransition_3pk3j"), "Playing_Bass_BAKED", "Playing_Bass_BAKED 2", SubResource("AnimationNodeStateMachineTransition_t550a"), "Playing_Bass_BAKED 2", "Playing_Bass_BAKED 3", SubResource("AnimationNodeStateMachineTransition_5poxr"), "Playing_Bass_BAKED 3", "End", SubResource("AnimationNodeStateMachineTransition_5ic1a"), "Start", "Idle_BAKED", SubResource("AnimationNodeStateMachineTransition_aym3i")]
-graph_offset = Vector2(580.158, -3)
+graph_offset = Vector2(-14.1331, -3)
 
 [node name="Monster_01_Rigged" instance=ExtResource("1_s7m3r")]
 script = ExtResource("2_40sba")

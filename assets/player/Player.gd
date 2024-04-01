@@ -86,6 +86,8 @@ func _physics_process(delta):
 
 func lock_controller():
 		SPEED = 0
+		velocity.x = 0
+		velocity.y = 0
 		controller_locked = true
 		
 func unlock_controller():
